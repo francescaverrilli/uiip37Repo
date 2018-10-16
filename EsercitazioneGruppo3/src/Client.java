@@ -1,8 +1,10 @@
+import java.util.Vector;
 
 public class Client {
 	
 	public static void main(String[] args) {
 		
+
 
 		Indirizzo i = new Indirizzo ("via Galatina", 50, "Santa Maria Capua Vetere", "81055", "CE", "Campania");
 		
@@ -20,6 +22,13 @@ public class Client {
 		Persona p3 = new Persona("Andrea","Guastaferro","24/09/91",indirizzo);
 		
 		System.out.println(p3.toString());
+		
+		Vector<Persona> v = new Vector<Persona>();
+		v.add(p);
+		v.add(p2);
+		v.add(p3);
+		
+		ResidentiCampaniaCarlo.residentiCampania(v);
 		
 	}
 
