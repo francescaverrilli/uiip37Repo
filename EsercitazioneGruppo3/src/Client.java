@@ -1,6 +1,5 @@
 import java.util.Vector;
 import java.text.ParseException;
-import java.util.LinkedList;
 
 public class Client {
 	
@@ -18,7 +17,7 @@ public class Client {
 
 		
 		Indirizzo indirizzo= new Indirizzo("Via f. Tedesco",39,"Taurasi","83030","Avellino","Lazio");
-		Persona p3 = new Persona("Andrea","Guastaferro","24/09/91",indirizzo);
+		Persona p3 = new Persona("Andrea","Guastaferro","24/09/1991",indirizzo);
 		
 		
 		
@@ -26,6 +25,10 @@ public class Client {
 		v2.add(p);
 		v2.add(p2);
 		v2.add(p3);
+		//Persona p5 = new Persona("Pisello", "De Gennaro", "08/08/1999", i);
+		Persona p7 = new Persona("fonzo", "De Gennaro", "08/08/1991", i);
+		//v2.add(p5);
+		v2.add(p7);
 		
 		try {
 			Persona piuGiovane = Caserta.getPersonaPiuGiovane(v2);
