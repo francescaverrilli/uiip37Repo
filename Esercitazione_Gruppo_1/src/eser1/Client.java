@@ -48,7 +48,7 @@ public class Client {
 		System.out.println(campani);
 
 		// <------------------------------------------------------------------------------------------>
-	
+
 		// Ricerca Studenti Silvio
 		Studente Silvio = new Studente(io.getNome(), io.getCognome(), io.getDatanascita(), io.getIndirizzo(), 1,
 				"Ingegneria Energetica");
