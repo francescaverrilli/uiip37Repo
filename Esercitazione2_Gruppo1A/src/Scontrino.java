@@ -6,12 +6,16 @@ public class Scontrino {
 	private LinkedList<Prodotto> lista;
 	private double importo;
 
-	public Scontrino() {
-		super();
-		this.codiceScontrino = "";
-		this.cliente = null;
+	public Scontrino(String codiceScontrino, Cliente cliente) {
+		this.codiceScontrino = codiceScontrino;
+		this.cliente = cliente;
 		this.lista = new LinkedList<Prodotto>();
 		this.importo = 0;
+	}
+
+	public void aggiungiProdotto(Prodotto p) {
+		this.lista.add(p);
+		this.importo = this.importo + p.getCosto();
 	}
 
 	public String getCodiceScontrino() {
@@ -49,7 +53,7 @@ public class Scontrino {
 	@Override
 	public String toString() {
 		return "Scontrino {\ncodiceScontrino=" + codiceScontrino + "\ncliente=" + cliente + "\nlista=" + lista
-				+ "\nimporto=" + importo + "}";
+				+ "\nimporto=" + importo + "\n}";
 	}
 
 }

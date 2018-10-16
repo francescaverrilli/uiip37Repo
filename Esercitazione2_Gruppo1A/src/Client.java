@@ -19,21 +19,12 @@ public class Client {
 		Prodotto p2 = new Prodotto("UUGGFF", "Nutella", 3.50f, 10);
 		
 		
-		
-	}
-	
-	
-	
-	public static Scontrino calcolaTot(LinkedList<Prodotto> lista) {
-		
-		Scontrino sc= new Scontrino();
-		
-		float somma=0;
-		for(int i=0; i<lista.size(); i++) {
-			somma= somma + lista.get(i).getCosto();
-			
-		}
-		return sc;
+
+		Scontrino scontrino=new Scontrino("000001",Frank);
+		scontrino.aggiungiProdotto(patatine);
+		scontrino.aggiungiProdotto(pizza);
+		System.out.println(scontrino);
+
 	}
 
 }
