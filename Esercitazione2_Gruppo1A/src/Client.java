@@ -2,6 +2,7 @@
 public class Client {
 
 	public static void main(String[] args) {
+
 		
 		//(String codice, String nome, String cognome, int punti)
 		Cliente silvio= new Cliente("ID1234", "Silvio", "Barbato", 10);
@@ -13,6 +14,11 @@ public class Client {
 		
 		
 
+		Cliente Frank = new Cliente("001", "Frank", "Abba", 100);
+
+
+		Prodotto patatine = new Prodotto("P1", "Patatine", 1, 2);
+		Prodotto pizza = new Prodotto("P2", "Pizza", 2, 4);
 	}
 
 }
