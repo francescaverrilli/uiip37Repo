@@ -7,7 +7,14 @@ private String datanascita;
 private Indirizzo indirizzo;
 
 
+
+
+
+
+
 public Persona(String nome, String cognome, String datanascita, Indirizzo indirizzo) {
+	super();
+
 	this.nome = nome;
 	this.cognome = cognome;
 	this.datanascita = datanascita;
@@ -43,6 +50,10 @@ public String getDatanascita() {
 public void setDatanascita(String datanascita) {
 	this.datanascita = datanascita;
 }
+
+
+
+
 
 
 public Indirizzo getIndirizzo() {
