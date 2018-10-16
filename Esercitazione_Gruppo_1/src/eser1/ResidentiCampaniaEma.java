@@ -18,7 +18,7 @@ public LinkedList<Persona> trovapersone() {
 			
 		}
 	}
-	return lista;
+	return persone;
 }
 public LinkedList<Persona> getLista() {
 	return lista;

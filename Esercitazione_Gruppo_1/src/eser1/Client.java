@@ -8,6 +8,7 @@ import java.util.Vector;
 public class Client {
 
 	public static void main(String[] args) {
+
 		// Creazione Persone
 		Indirizzo ind1 = new Indirizzo("Via del Tintoretto", 28, "Modena", 41100, "MO", "Emilia Romagna");
 		Persona ema = new Persona("Emanuele", "Avallone", new Date(1992, 5, 18), ind1);
@@ -58,7 +59,7 @@ public class Client {
 		System.out.print(Silvio);
 
 		// Ricerca Studenti Silvio
-		Studente eman = new Studente("Emanuele", "Avallone",new Date(1992, 5, 18), ind1, 1, "Ingegneria Biomedica");
+		Studente eman = new Studente("Emanuele", "Avallone", new Date(1992, 5, 18), ind1, 1, "Ingegneria Biomedica");
 
 		Studente Abba = new Studente(frank.getNome(), frank.getCognome(), frank.getDatanascita(), frank.getIndirizzo(),
 				2, "Ingegneria Informatica");
@@ -72,7 +73,21 @@ public class Client {
 		titoli.aggiungiStudente(Silvio);
 		titoli.aggiungiStudente(eman);
 		System.out.println(titoli.studentiConUnTitolo());
+		// trova la persona piu giovane(di emanuele)
 
+		// aggiunta oggetto della classe Avallone
+		LinkedList<Persona> person = new LinkedList<Persona>();
+		person.add(ema);
+		person.add(frank);
+		person.add(io);
+		
+		System.out.println("\n\n\n\n");
+		
+		Avallone ava = new Avallone(person);
+		System.out.println("Il più giocane della lista e\n");
+		System.out.println(ava.trovamin());
+		System.out.println("\nIl più vecchio della lista e\n");
+		System.out.println(ava.trovamax());
 	}
 
 }
