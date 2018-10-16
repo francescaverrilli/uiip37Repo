@@ -123,12 +123,15 @@ public class Client {
 		filtroDaniela = StudentiConFormazioneDaniela.listaStudentiFormati(lista_studenti_Daniela);
 		System.out.println("Gli studenti con almeno un corso di formazione sono " + filtroDaniela.size());
 		
-<<<<<<< HEAD
+
 		Persona trovata=ClasseRicercaSantoro.CercaGiovane(array1);
 		System.out.println(trovata.getNome());
-=======
-
->>>>>>> 2de8a632b6b5d8c72264a56fd590c0ff39061cca
+		
+		Persona cercata=Annicchiarico.CercaGiovane(array1);
+		System.out.println(trovata.getNome());
+		
+		Persona cercato=Annicchiarico.CercaVecchio(array1);
+		System.out.println(trovata.getNome());
 	}
 
 }
