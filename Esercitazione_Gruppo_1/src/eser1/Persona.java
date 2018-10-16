@@ -4,10 +4,10 @@ public class Persona {
 private String nome;
 private String cognome;
 private String datanascita; 
-private String indirizzo;
+private Indirizzo indirizzo;
 
 
-public Persona(String nome, String cognome, String datanascita, String indirizzo) {
+public Persona(String nome, String cognome, String datanascita, Indirizzo indirizzo) {
 	this.nome = nome;
 	this.cognome = cognome;
 	this.datanascita = datanascita;
@@ -45,12 +45,12 @@ public void setDatanascita(String datanascita) {
 }
 
 
-public String getIndirizzo() {
+public Indirizzo getIndirizzo() {
 	return indirizzo;
 }
 
 
-public void setIndirizzo(String indirizzo) {
+public void setIndirizzo(Indirizzo indirizzo) {
 	this.indirizzo = indirizzo;
 }
 
