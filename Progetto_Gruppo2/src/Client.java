@@ -1,5 +1,3 @@
-
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Client {
@@ -7,7 +5,7 @@ public class Client {
 	public static void main(String[] args) {
 		LinkedList<Persona> elencoPersone = new LinkedList<Persona>();
 		LinkedList<String> corsi_D= new LinkedList<String>();
-		
+		LinkedList<Studente> lista_studenti_Daniela = new LinkedList<Studente>();
 		
 		LinkedList<String> corsi = new LinkedList<String>();
 		corsi.add("programmazione");
@@ -22,7 +20,7 @@ public class Client {
 		System.out.println(s.getDataNascita());
 		System.out.println(s.getIndirizzo().getVia());
 		System.out.println(s.getIndirizzo().getNumerocivvico());
-		
+		lista_studenti_Daniela.add(s);
 		
 		elencoPersone.add(s);
 		
@@ -31,6 +29,7 @@ public class Client {
 		corsi_D.add("Informatici senza frontiere");
 		corsi_D.add("Calma");
 		Studente st_Danielaa = new Studente("Daniela", "Guardabascio",  "19 settembre 1985", i_Daniela, 2, "Ingegenria Informatica", corsi_D);
+		lista_studenti_Daniela.add(st_Danielaa);
 		
 		System.out.println("Dati Anagrafici");
 		System.out.println(p_Daniela.getNome());
@@ -59,6 +58,8 @@ public class Client {
 		Persona Chiara = new Persona ("Chiara", "Annicchiarico", "16/04/90", indirizzo);
 		LinkedList<String> corsiFormazione = new LinkedList<String>();
 		Studente s1 = new Studente ("Chiara", "Annicchiarico", "16/04/90", indirizzo, 1, "ingegnere", corsiFormazione );
+		lista_studenti_Daniela.add(s1);
+		
 		
 		System.out.println("Dati Anagrafici");
 		System.out.println(Chiara.getNome());
@@ -108,7 +109,10 @@ public class Client {
 		ResidentiCampaniaAnnicchiarico.Stampa(array1);
 		
 		
-
+		System.out.println("Lista studenti con formazione Daniela");
+		LinkedList<Studente> filtroDaniela = new LinkedList<Studente>();
+		filtroDaniela = StudentiConFormazioneDaniela.listaStudentiFormati(lista_studenti_Daniela);
+		System.out.println("Gli studenti con almeno un corso di formazione sono " + filtroDaniela.size());
 		
 		
 	}
