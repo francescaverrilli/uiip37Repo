@@ -73,6 +73,7 @@ public class Client {
 		titoli.aggiungiStudente(Silvio);
 		titoli.aggiungiStudente(eman);
 		System.out.println(titoli.studentiConUnTitolo());
+<<<<<<< HEAD
 		// trova la persona piu giovane(di emanuele)
 
 		// aggiunta oggetto della classe Avallone
@@ -88,6 +89,30 @@ public class Client {
 		System.out.println(ava.trovamin());
 		System.out.println("\nIl più vecchio della lista e\n");
 		System.out.println(ava.trovamax());
+=======
+		
+		
+
+		// Homework 16/10
+		// Barbato
+		System.out.println("\nLa persona più giovane è: "+ Barbato.cercaGiovane(p).getNome()+" "+ Barbato.cercaGiovane(p).getCognome());
+		
+		System.out.println("\nLa persona più adulta è: "+ Barbato.cercaAdulto(p).getNome()+" "+ Barbato.cercaAdulto(p).getCognome());
+
+		// Homework 16/10
+		// Abbatangelo
+		System.out.print("\n\n\n**************ABBATANGELO*********************************\n");
+		Abbatangelo Francesco = new Abbatangelo();
+		Francesco.aggiungiPersona(io);
+		Francesco.aggiungiPersona(ema);
+		Francesco.aggiungiPersona(frank);
+
+		System.out.println("La persona più giovane è: " + Francesco.cercaPersonaGiovane().getNome());
+		System.out.println("La persona più anziana è: " + Francesco.cercaPersonaAnziana().getNome());
+
+		System.out.print("***********************************************");
+
+>>>>>>> 5e94fc3b9eb55893f42786a4a84644970bf3954b
 	}
 
 }

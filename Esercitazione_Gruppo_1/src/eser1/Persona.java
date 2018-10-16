@@ -7,6 +7,10 @@ public class Persona {
 	private String cognome;
 	private Date datanascita;
 	private Indirizzo indirizzo;
+	
+	public Persona() {
+		
+	}
 
 	public Persona(String nome, String cognome, Date datanascita, Indirizzo indirizzo) {
 		super();
