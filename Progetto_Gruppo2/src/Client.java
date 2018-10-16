@@ -14,7 +14,6 @@ public class Client {
 		corsi.add("Analisi");
 		
 		Indirizzo ind = new Indirizzo(10, "via bari", 28, 72013, "Ceglie Messapica", "br", "puglia");
-		//Persona p = new Persona("sergio", "santoro", "21/12/1991", ind);
 		Studente s = new Studente("sergio", "santoro", "21/12/1991", ind,1,"laurea informatica",corsi);
 		System.out.println(" ");
 		System.out.println(s.getNome());
@@ -33,7 +32,7 @@ public class Client {
 		elencoPersone.add(s);
 		
 		Indirizzo i_Daniela = new Indirizzo(10, "Via Monticchio", 4, 83031, "Ariano Irpino", "AV", "Campania");
-		Persona p_Daniela = new Persona("Daniela", "Guardabascio", "19 settembre 1985", i_Daniela);
+		Persona p_Daniela = new Persona("Daniela", "Guardabascio", "19/09/1985", i_Daniela);
 		corsi_D.add("Informatici senza frontiere");
 		corsi_D.add("Calma");
 		Studente st_Danielaa = new Studente("Daniela", "Guardabascio",  "19 settembre 1985", i_Daniela, 2, "Ingegenria Informatica", corsi_D);
