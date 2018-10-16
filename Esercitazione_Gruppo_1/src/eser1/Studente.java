@@ -45,7 +45,7 @@ public class Studente extends Persona {
 
 	@Override
 	public String toString() {
-		return "Studente [livello=" + livello + ", titolo=" + titolo + ", corsi=" + corsi + "]";
+		return super.toString() + "\nlivello: " + livello + "\ntitolo: " + titolo + "\ncorsi: " + corsi;
 	}
 
 }

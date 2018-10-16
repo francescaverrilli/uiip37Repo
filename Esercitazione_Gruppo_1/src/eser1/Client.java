@@ -45,11 +45,14 @@ public class Client {
 		LinkedList<Persona> campani = res.trovapersone();
 		System.out.println(campani);
 
-		System.out.print(elenco.residentiCampaniaFrank());
+		System.out.println(elenco.residentiCampaniaFrank());
 		// <------------------------------------------------------------------------------------------>
 
-		Studente Abba = new Studente(frank.getNome(),frank.getCognome(),frank.getDatanascita(),frank.getIndirizzo(),2,"Ingegneria Informatica");
-
+		Studente Abba = new Studente(frank.getNome(), frank.getCognome(), frank.getDatanascita(), frank.getIndirizzo(),
+				2, "Ingegneria Informatica");
+		Abba.aggiungiCorso("UIIP");
+		System.out.println("\n\n");
+		System.out.println(Abba);
 	}
 
 }
