@@ -1,3 +1,5 @@
+import java.sql.Date;
+import java.text.ParseException;
 import java.util.LinkedList;
 
 public class Studente extends Persona {
@@ -6,7 +8,7 @@ public class Studente extends Persona {
 	private String titoloStudio;
 	private LinkedList<String> corsiFormazione=new LinkedList<String>();
 
-	public Studente(String nome, String cognome, String dataNascita, Indirizzo indirizzo, int livelloLaurea,String titoloStudio, LinkedList<String> corsiFormazione) {
+	public Studente(String nome, String cognome, String dataNascita, Indirizzo indirizzo, int livelloLaurea,String titoloStudio, LinkedList<String> corsiFormazione) throws ParseException {
 		super(nome, cognome, dataNascita, indirizzo);
 		this.livelloLaurea = livelloLaurea;
 		this.titoloStudio = titoloStudio;
