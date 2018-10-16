@@ -73,7 +73,7 @@ public class Client {
 
 		elencoPersone.add(Chiara);
 		System.out.println(" ");
-		System.out.println("Stampa Daniela ");
+		System.out.println("Stampa Chiara ");
 		ResidentiCampaniaGuardabascio.residentiCampania(elencoPersone);
 		System.out.println("Elenco persone residenti in campania");
 		for( Persona p_d : elencoPersone) {
