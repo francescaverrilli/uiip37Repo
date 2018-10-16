@@ -1,6 +1,4 @@
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Vector;
 
 public class Caserta {
@@ -11,7 +9,7 @@ public class Caserta {
 		if(!persone.isEmpty()) {
 			Persona persGiovane = persone.get(0);
 			
-			for(int i = 0; i < persone.size(); i++) {
+			for(int i = 1; i < persone.size(); i++) {
 				if(persone.get(i).getData_di_nascita().after(persGiovane.getData_di_nascita())) {
 					persGiovane = persone.get(i);
 				}
@@ -29,7 +27,7 @@ public class Caserta {
 		
 		if(!persone.isEmpty()) {
 			Persona persVecchia = persone.get(0);		
-			for(int i = 0; i < persone.size(); i++) {
+			for(int i = 1; i < persone.size(); i++) {
 				if(persone.get(i).getData_di_nascita().before(persVecchia.getData_di_nascita())) {
 					persVecchia = persone.get(i);
 				}

@@ -25,10 +25,6 @@ public class Client {
 		v2.add(p);
 		v2.add(p2);
 		v2.add(p3);
-		//Persona p5 = new Persona("Pisello", "De Gennaro", "08/08/1999", i);
-		Persona p7 = new Persona("fonzo", "De Gennaro", "08/08/1991", i);
-		//v2.add(p5);
-		v2.add(p7);
 		
 		try {
 			Persona piuGiovane = Caserta.getPersonaPiuGiovane(v2);
