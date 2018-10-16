@@ -43,8 +43,8 @@ public class Client {
 		elencoPersone.add(p_Daniela);
 
 		Indirizzo i = new Indirizzo(34, "Via Iscalonga", 70, 83036, "Mirabella Eclano", "AV", "Campania");
-		Persona Angela = new Persona("Angela", "Di Pietro", "11/06/1992", i);
-		
+		//Persona Angela = new Persona("Angela", "Di Pietro", "11/06/1992", i);
+		Studente Angela = new Studente("Angela", "Di Pietro", "11/06/1992", i, 2, "Ingegeria Civile",corsi_D);
 		System.out.println(" ");
 		System.out.println("Dati Anagrafici");
 		System.out.println(Angela.getNome());
@@ -53,7 +53,8 @@ public class Client {
 		System.out.println("Indirizzo:");
 		System.out.println(Angela.getIndirizzo().getVia() + " " + Angela.getIndirizzo().getNumerocivvico() + " "
 				+ Angela.getIndirizzo().getCitta());
-		
+		l.add(s);
+		StudentiFormazione.StampaStudenti(l);
 
 		elencoPersone.add(Angela);
 		System.out.println(" ");
