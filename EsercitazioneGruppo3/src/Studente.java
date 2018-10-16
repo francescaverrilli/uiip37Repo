@@ -1,15 +1,17 @@
-import java.util.LinkedList;
+import java.util.Vector;
 
 public class Studente extends Persona{
 	
 	private String titoloDiStudio;
 	private int livelloLaurea;
-	private LinkedList<String> corsiFormazione;
+	private Vector<String> corsiFormazione;
 
 	public Studente(String nome, String cognome, String data_di_nascita, Indirizzo indirizzo,
-			String titoloDiStudio, int livelloLaurea, LinkedList<String> corsiFormazione) {
+			String titoloDiStudio, int livelloLaurea, Vector<String> corsiFormazione) {
 		super(nome, cognome, data_di_nascita, indirizzo);
-
+		this.titoloDiStudio=titoloDiStudio;
+		this.livelloLaurea=livelloLaurea;
+		this.corsiFormazione=corsiFormazione;
 	}
 
 	public String getTitoloDiStudio() {
@@ -28,20 +30,19 @@ public class Studente extends Persona{
 		this.livelloLaurea = livelloLaurea;
 	}
 
-	public LinkedList<String> getCorsiFormazione() {
+	public Vector<String> getCorsiFormazione() {
 		return corsiFormazione;
 	}
 
-	public void setCorsiFormazione(LinkedList<String> corsiFormazione) {
+	public void setCorsiFormazione(Vector<String> corsiFormazione) {
 		this.corsiFormazione = corsiFormazione;
 	}
 
 	@Override
 	public String toString() {
-		return "Studente [titoloDiStudio=" + titoloDiStudio + ", livelloLaurea=" + livelloLaurea + ", corsiFormazione="
-				+ corsiFormazione + "]";
+		return "Studente [nome= "+ getNome()+" cognome= "+ getCognome()+"data_di_nascita= "+getData_di_nascita()+ "indirizzo= "+getNuovo_indirizzo()+" titoloDiStudio=" + titoloDiStudio + ", livelloLaurea=" + livelloLaurea + ", corsiFormazione="
+				+corsiFormazione.toString() + "]";
 	}
-	
 	
 	
 

@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.Vector;
 
 public class ResidentiCampaniaAndrea {
 	
@@ -37,6 +38,14 @@ public class ResidentiCampaniaAndrea {
 		}
 	}
 	
+	public Vector<Studente> cerca_studente(Vector<Studente> vett){
+		Vector<Studente> vett_temp=new Vector<Studente>();
+		for(int i=0; i< vett.size();i++) {
+			if(!vett.get(i).getCorsiFormazione().isEmpty()) {
+				vett_temp.add(vett.get(i));
+			}
+		}
+		return vett_temp;
 
-
+	}
 }

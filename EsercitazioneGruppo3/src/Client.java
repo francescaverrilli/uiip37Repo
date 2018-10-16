@@ -26,7 +26,7 @@ public class Client {
 		v2.add(p2);
 		v2.add(p3);
 		
-		ResidentiCampaniaVIncenzo.stampaResidentiCampania(v2);
+		//ResidentiCampaniaVIncenzo.stampaResidentiCampania(v2);
 		
 
 		Vector<Persona> v = new Vector<Persona>();
@@ -34,7 +34,7 @@ public class Client {
 		v.add(p2);
 		v.add(p3);
 		
-		ResidentiCampaniaCarlo.residentiCampania(v);
+		//ResidentiCampaniaCarlo.residentiCampania(v);
 		
 
 		LinkedList<Persona>lista_persone =new LinkedList<Persona>();
@@ -44,8 +44,28 @@ public class Client {
 		lista_persone.add(p2);
 		lista_persone.add(p3);
 		
-		rsa.stampa_per_regione("LAZIO");
-
+		//rsa.stampa_per_regione("LAZIO");
+		
+		Studente nuovo_studente= new Studente("Andrea", "Guastaferro", "24/09/91", indirizzo,
+				"Laurea", 1, new Vector<String>());
+		
+	nuovo_studente.getCorsiFormazione().add("Uiip");
+	nuovo_studente.getCorsiFormazione().add("Oracle SE7");
+	nuovo_studente.getCorsiFormazione().add("Java");
+	
+	Studente nuovo_studente1= new Studente("Vincenzo", "Guastaferro", "25/09/91", i,
+			"Laurea", 1, new Vector<String>());
+	
+	Vector<Studente> vett_or=new Vector<Studente>();
+	vett_or.add(nuovo_studente);
+	vett_or.add(nuovo_studente1);
+	
+	Vector<Studente> new_vett= new Vector<Studente>();
+	
+	new_vett= rsa.cerca_studente(vett_or);
+	
+	System.out.println(new_vett.toString());
+	
 	}
 
 }
