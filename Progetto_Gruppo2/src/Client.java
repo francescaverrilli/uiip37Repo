@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 
 import java.util.LinkedList;
 
 
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7136990fc9b4cf2d710da786c94cfa5709f33c73
+>>>>>>> 9fa7ab599054c10a581bedc3c55a79561586792c
 import java.util.*;
 
 public class Client {
@@ -45,7 +53,12 @@ public class Client {
 		
 
 		elencoPersone.add(Angela);
+<<<<<<< HEAD
 	Indirizzo indirizzo = new Indirizzo (12, "Contrada San Cesareo", 30, 83030, "Zungoli", "AV", "Campania");
+=======
+
+		Indirizzo indirizzo = new Indirizzo (12, "Contrada San Cesareo", 30, 83030, "Zungoli", "AV", "Campania");
+>>>>>>> 9fa7ab599054c10a581bedc3c55a79561586792c
 		Persona Chiara = new Persona ("Chiara", "Annicchiarico", "16/04/90", indirizzo);
 		System.out.println("Dati Anagrafici");
 		System.out.println(Chiara.getNome());
@@ -56,7 +69,14 @@ public class Client {
 				+ Chiara.getIndirizzo().getCitta());
 
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7136990fc9b4cf2d710da786c94cfa5709f33c73
+>>>>>>> 9fa7ab599054c10a581bedc3c55a79561586792c
 		elencoPersone.add(Chiara);
 		
 		ResidentiCampaniaGuardabascio.residentiCampania(elencoPersone);
@@ -75,8 +95,16 @@ public class Client {
 		
 		ResidentiCampaniaSantoro.Stampa(arr);
 		
-
+<<<<<<< HEAD
 		
+		ArrayList<Persona> array = new ArrayList<Persona>();
+		arr.add(Angela);
+		arr.add(p_Daniela);
+		arr.add(Chiara);
+		arr.add(p);
+		ResidentiCampaniaDiPietro.Stampa(array);
+		
+<<<<<<< HEAD
 		elencoPersone.add(Chiara);
 		ArrayList<Persona> array1 = new ArrayList<Persona>();
 		array1.add(p);
@@ -84,6 +112,12 @@ public class Client {
 		array1.add(Chiara);
 		array1.add(Angela);
 
+=======
+		
+		
+=======
+>>>>>>> 7136990fc9b4cf2d710da786c94cfa5709f33c73
+>>>>>>> 9fa7ab599054c10a581bedc3c55a79561586792c
 	}
 
 }
