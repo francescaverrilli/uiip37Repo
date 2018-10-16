@@ -31,7 +31,17 @@ public class Client {
 		System.out.println("Il cognome" + Angela.getCognome());
 		System.out.println("Nata il " + Angela.getDataNascita());
 		System.out.println("Residente a" + i.getCitta() + i.getNumerocivvico() + i.getProvincia() + i.getRegione());
-
+		
+		
+		Indirizzo indirizzo = new Indirizzo (12, "Contrada San Cesareo", 30, 83030, "Zungoli", "AV", "Campania");
+		Persona Chiara = new Persona ("Chiara", "Annicchiarico", "16/04/90", indirizzo);
+		System.out.println("Dati Anagrafici");
+		System.out.println(Chiara.getNome());
+		System.out.println(Chiara.getCognome());
+		System.out.println(Chiara.getDataNascita());
+		System.out.println("Indirizzo:");
+		System.out.println(Chiara.getIndirizzo().getVia() + " " + Chiara.getIndirizzo().getNumerocivvico() + " "
+				+ Chiara.getIndirizzo().getCitta());
 	}
 
 }
