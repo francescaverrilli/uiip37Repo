@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 
 public class Client {
 
@@ -16,6 +17,25 @@ public class Client {
 		Cliente cl1 = new Cliente("TREYUO", "Emanuele", "Avallone", 250);
 		Prodotto p1 = new Prodotto("TTRREE", "Pan Bauletto", 1.30f, 5);
 		Prodotto p2 = new Prodotto("UUGGFF", "Nutella", 3.50f, 10);
+		
+		
+		
+	}
+	
+	
+	
+	public static Scontrino calcolaTot(LinkedList<Prodotto> lista) {
+		
+		Scontrino sc= new Scontrino();
+		
+		float somma=0;
+		for(int i=0; i<lista.size(); i++) {
+			somma= somma + lista.get(i).getCosto();
+			
+		}
+		return sc;
 	}
 
 }
+
+
