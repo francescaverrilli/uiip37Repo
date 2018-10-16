@@ -8,8 +8,8 @@ public class Indirizzo {
 	private String provincia;
 	private String regione;
 	
-	public Indirizzo(int distanza, String via, int numerocivvico, int cap, String citta, String provincia,
-			String regione) {
+	public Indirizzo(int distanza, String via, int numerocivvico, int cap, String citta, String provincia,String regione) {
+		
 		super();
 		this.distanza = distanza;
 		this.via = via;
