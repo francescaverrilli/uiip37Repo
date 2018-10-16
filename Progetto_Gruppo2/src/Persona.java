@@ -16,7 +16,7 @@ public class Persona {
 	}
 
 
-	private Persona() {}
+	public Persona() {}
 
 
 	public String getNome() {
