@@ -1,5 +1,6 @@
 package eser1;
 
+import java.util.Date;
 import java.util.LinkedList;
 
 public class Studente extends Persona {
@@ -7,7 +8,7 @@ public class Studente extends Persona {
 	private String titolo;
 	private LinkedList<String> corsi;
 
-	public Studente(String nome, String cognome, String datanascita, Indirizzo indirizzo, int livello, String titolo) {
+	public Studente(String nome, String cognome, Date datanascita, Indirizzo indirizzo, int livello, String titolo) {
 		super(nome, cognome, datanascita, indirizzo);
 		this.livello = livello;
 		this.titolo = titolo;

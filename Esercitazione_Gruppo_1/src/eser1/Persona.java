@@ -1,12 +1,14 @@
 package eser1;
 
+import java.util.Date;
+
 public class Persona {
 	private String nome;
 	private String cognome;
-	private String datanascita;
+	private Date datanascita;
 	private Indirizzo indirizzo;
 
-	public Persona(String nome, String cognome, String datanascita, Indirizzo indirizzo) {
+	public Persona(String nome, String cognome, Date datanascita, Indirizzo indirizzo) {
 		super();
 		this.nome = nome;
 		this.cognome = cognome;
@@ -30,11 +32,11 @@ public class Persona {
 		this.cognome = cognome;
 	}
 
-	public String getDatanascita() {
+	public Date getDatanascita() {
 		return datanascita;
 	}
 
-	public void setDatanascita(String datanascita) {
+	public void setDatanascita(Date datanascita) {
 		this.datanascita = datanascita;
 	}
 

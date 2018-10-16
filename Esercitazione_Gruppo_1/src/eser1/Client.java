@@ -1,5 +1,6 @@
 package eser1;
 
+import java.util.Date;
 import java.util.LinkedList;
 
 import java.util.Vector;
@@ -9,15 +10,15 @@ public class Client {
 	public static void main(String[] args) {
 		// Creazione Persone
 		Indirizzo ind1 = new Indirizzo("Via del Tintoretto", 28, "Modena", 41100, "MO", "Emilia Romagna");
-		Persona ema = new Persona("Emanuele", "Avallone", "18/05/1992", ind1);
+		Persona ema = new Persona("Emanuele", "Avallone", new Date(1992, 5, 18), ind1);
 		System.out.println(ema);
 
 		Indirizzo myIndirizzo = new Indirizzo("C/da Pino", 9, "Benevento", 82110, "BN", "Campania");
-		Persona io = new Persona("Silvio", "Barbato", "06/09/1991", myIndirizzo);
+		Persona io = new Persona("Silvio", "Barbato", new Date(1991, 9, 06), myIndirizzo);
 		System.out.println(io);
 
 		Indirizzo indirizzo = new Indirizzo("C/DA Difesa Grande", 52, "Ariano Irpino", 83031, "AV", "Campania");
-		Persona frank = new Persona("Francesco", "Abbatangelo", "10/05/1991", indirizzo);
+		Persona frank = new Persona("Francesco", "Abbatangelo", new Date(1991, 5, 10), indirizzo);
 		System.out.print(frank);
 
 		// <------------------------------------------------------------------->
@@ -57,7 +58,7 @@ public class Client {
 		System.out.print(Silvio);
 
 		// Ricerca Studenti Silvio
-		Studente eman = new Studente("Emanuele", "Avallone", "18/05/1992", ind1, 1, "Ingegneria Biomedica");
+		Studente eman = new Studente("Emanuele", "Avallone",new Date(1992, 5, 18), ind1, 1, "Ingegneria Biomedica");
 
 		Studente Abba = new Studente(frank.getNome(), frank.getCognome(), frank.getDatanascita(), frank.getIndirizzo(),
 				2, "Ingegneria Informatica");
