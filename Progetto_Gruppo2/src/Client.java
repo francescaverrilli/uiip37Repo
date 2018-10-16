@@ -48,6 +48,8 @@ public class Client {
 		ArrayList<Persona> arr = new ArrayList<Persona>();
 		arr.add(p);
 		arr.add(p_Daniela);
+		arr.add(Chiara);
+		arr.add(Angela);
 		
 		ResidentiCampaniaSantoro.Stampa(arr);
 		
