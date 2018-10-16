@@ -1,5 +1,8 @@
 package eser1;
 
+import java.util.LinkedList;
+
+
 public class Client {
 
 	public static void main(String[] args) {
@@ -24,6 +27,17 @@ public class Client {
 		elenco.aggiungiPersona(ema);
 		elenco.aggiungiPersona(io);
 		elenco.aggiungiPersona(frank);
+		LinkedList<Persona> citt= new LinkedList<Persona>();
+		
+	
+		citt.add(io);
+		citt.add(ema);
+		citt.add(frank);
+		
+		
+		ResidentiCampaniaEma res= new ResidentiCampaniaEma(citt);
+		LinkedList<Persona> campani=res.trovapersone();
+		System.out.println(campani);
 
 		System.out.print(elenco.residentiCampaniaFrank());
 	}
