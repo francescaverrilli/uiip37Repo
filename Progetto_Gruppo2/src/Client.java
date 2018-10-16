@@ -4,6 +4,7 @@ import java.util.*;
 public class Client {
 
 	public static void main(String[] args) throws ParseException {
+
 		LinkedList<Persona> elencoPersone = new LinkedList<Persona>();
 		LinkedList<String> corsi_D= new LinkedList<String>();
 		LinkedList<Studente> lista_studenti_Daniela = new LinkedList<Studente>();
@@ -122,8 +123,12 @@ public class Client {
 		filtroDaniela = StudentiConFormazioneDaniela.listaStudentiFormati(lista_studenti_Daniela);
 		System.out.println("Gli studenti con almeno un corso di formazione sono " + filtroDaniela.size());
 		
+<<<<<<< HEAD
 		Persona trovata=ClasseRicercaSantoro.CercaGiovane(array1);
 		System.out.println(trovata.getNome());
+=======
+
+>>>>>>> 2de8a632b6b5d8c72264a56fd590c0ff39061cca
 	}
 
 }
