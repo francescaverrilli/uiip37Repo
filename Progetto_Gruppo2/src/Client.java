@@ -8,6 +8,7 @@ public class Client {
 		LinkedList<Studente> lista_studenti_Daniela = new LinkedList<Studente>();
 		
 		LinkedList<String> corsi = new LinkedList<String>();
+		LinkedList<Studente> l = new LinkedList<Studente>();
 		corsi.add("programmazione");
 		corsi.add("Analisi");
 		
@@ -20,7 +21,13 @@ public class Client {
 		System.out.println(s.getDataNascita());
 		System.out.println(s.getIndirizzo().getVia());
 		System.out.println(s.getIndirizzo().getNumerocivvico());
+
 		lista_studenti_Daniela.add(s);
+
+		l.add(s);
+		StudentiFormazione.StampaStudenti(l);
+		
+
 		
 		elencoPersone.add(s);
 		
