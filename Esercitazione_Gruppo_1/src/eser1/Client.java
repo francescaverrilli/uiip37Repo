@@ -3,6 +3,9 @@ package eser1;
 import java.util.LinkedList;
 
 
+import java.util.Vector;
+
+
 public class Client {
 
 	public static void main(String[] args) {
@@ -22,6 +25,15 @@ public class Client {
 		Persona frank = new Persona("Francesco", "Abbatangelo", "10/05/1991", indirizzo);
 		System.out.print(frank);
 
+		
+		Vector<Persona> p= new Vector<Persona>();
+		p.add(io);
+		p.add(ema);
+		p.add(frank);
+		
+		System.out.print("\n"+ResidentiCampaniaSilvio.trovaResidentiCampania(p));
+		
+
 		System.out.print("\n\n\n");
 		Residenti_Campania_Frank elenco = new Residenti_Campania_Frank();
 		elenco.aggiungiPersona(ema);
@@ -40,6 +52,7 @@ public class Client {
 		System.out.println(campani);
 
 		System.out.print(elenco.residentiCampaniaFrank());
+
 	}
 
 }
