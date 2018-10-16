@@ -48,8 +48,8 @@ public class Persona {
 
 	@Override
 	public String toString() {
-		return "Persona {Nome: " + nome + ", Cognome: " + cognome + ", Datanascita: " + datanascita + ", Indirizzo: "
-				+ indirizzo + "}";
+		return "{\nNome: " + nome + "\nCognome: " + cognome + "\nDatanascita: " + datanascita + "\nIndirizzo: "
+				+ indirizzo + "\n}";
 	}
 
 }
