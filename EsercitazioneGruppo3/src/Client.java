@@ -21,18 +21,38 @@ public class Client {
 		Persona p3 = new Persona("Andrea","Guastaferro","24/09/1991",indirizzo);
 		
 		
-		
+		//Main Vincenzo
 		Vector<Persona> v2 = new Vector<Persona>();
 		v2.add(p);
 		v2.add(p2);
 		v2.add(p3);
 		
+		//Main Andrea
 		LinkedList<Persona> nl= new LinkedList<Persona>();
 		nl.add(p);
 		nl.add(p2);
 		nl.add(p3);
 		
-		/*try {
+		
+		//Main Carlo
+		Vector<Persona> vp = new Vector<Persona>();
+		vp.add(p);
+		vp.add(p2);
+		vp.add(p3);
+		
+		
+		try {
+			Persona pGiovane= DeGennaro.ritornaPiuGiovane(vp);
+			Persona pAnziano= DeGennaro.ritornaPiuVecchia(vp);
+			System.out.println("Il più giovane del gruppo è : "+pGiovane.getNome()+" "+pGiovane.getCognome()+" "+pGiovane.getData_di_nascita());
+			System.out.println("Il più vecchio del gruppo è : "+pAnziano.getNome()+" "+pAnziano.getCognome()+" "+pAnziano.getData_di_nascita());
+		}
+		catch (ParseException e){
+			e.printStackTrace();
+		}
+		
+		
+		try {
 			Persona piuGiovane = Caserta.getPersonaPiuGiovane(v2);
 			Persona piuVecchia = Caserta.getPersonaPiuVecchia(v2);
 			System.out.println("La persona più giovane è: " +
