@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7136990fc9b4cf2d710da786c94cfa5709f33c73
 import java.util.*;
 
 public class Client {
@@ -54,6 +58,10 @@ public class Client {
 				+ Chiara.getIndirizzo().getCitta());
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7136990fc9b4cf2d710da786c94cfa5709f33c73
 		elencoPersone.add(Chiara);
 		
 		ResidentiCampaniaGuardabascio.residentiCampania(elencoPersone);
@@ -72,6 +80,7 @@ public class Client {
 		
 		ResidentiCampaniaSantoro.Stampa(arr);
 		
+<<<<<<< HEAD
 		
 		ArrayList<Persona> array = new ArrayList<Persona>();
 		arr.add(Angela);
@@ -82,6 +91,8 @@ public class Client {
 		
 		
 		
+=======
+>>>>>>> 7136990fc9b4cf2d710da786c94cfa5709f33c73
 	}
 
 }
