@@ -58,7 +58,7 @@ public class Client {
 		System.out.print(Silvio);
 
 		// Ricerca Studenti Silvio
-		Studente eman = new Studente("Emanuele", "Avallone",new Date(1992, 5, 18), ind1, 1, "Ingegneria Biomedica");
+		Studente eman = new Studente("Emanuele", "Avallone", new Date(1992, 5, 18), ind1, 1, "Ingegneria Biomedica");
 
 		Studente Abba = new Studente(frank.getNome(), frank.getCognome(), frank.getDatanascita(), frank.getIndirizzo(),
 				2, "Ingegneria Informatica");
@@ -73,6 +73,18 @@ public class Client {
 		titoli.aggiungiStudente(eman);
 		System.out.println(titoli.studentiConUnTitolo());
 
+		// Homework 16/10
+		// Abbatangelo
+		System.out.print("\n\n\n**************ABBATANGELO*********************************\n");
+		Abbatangelo Francesco = new Abbatangelo();
+		Francesco.aggiungiPersona(io);
+		Francesco.aggiungiPersona(ema);
+		Francesco.aggiungiPersona(frank);
+
+		System.out.println("La persona più giovane è: " + Francesco.cercaPersonaGiovane().getNome());
+		System.out.println("La persona più anziana è: " + Francesco.cercaPersonaAnziana().getNome());
+
+		System.out.print("***********************************************");
 	}
 
 }
