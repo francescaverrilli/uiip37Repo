@@ -1,12 +1,8 @@
+import java.util.LinkedList;
 
-import java.util.*;
-
-public class StudentiFormazione {
-	
-	
-	
-	public static void StampaStudenti(LinkedList<Studente> l) {
-		for(Studente s:l) {
+public class DiPietroFormazione {
+	public static void StampaStudenti(LinkedList<Studente> lista) {
+		for(Studente s:lista) {
 			if(s.getCorsiFormazione().size()>0) {
 			System.out.println(s.getNome());
 			System.out.println(s.getCognome());

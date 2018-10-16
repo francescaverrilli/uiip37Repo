@@ -1,10 +1,6 @@
+import java.util.LinkedList;
 
-import java.util.*;
-
-public class StudentiFormazione {
-	
-	
-	
+public class CorsoFormazioneAnnicchiarico {
 	public static void StampaStudenti(LinkedList<Studente> l) {
 		for(Studente s:l) {
 			if(s.getCorsiFormazione().size()>0) {
