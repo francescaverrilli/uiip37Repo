@@ -52,21 +52,11 @@ public class Client {
 		System.out.println(elenco.residentiCampaniaFrank());
 		// <------------------------------------------------------------------------------------------>
 
-
-
-
-		
-		
-		String corsoSilvio= "UIIP";
+		String corsoSilvio = "UIIP";
 		Silvio.aggiungiCorso(corsoSilvio);
-
-
-
-		
-		
+		System.out.print(Silvio);
 
 		Studente eman = new Studente("Emanuele", "Avallone", "18/05/1992", ind1, 1, "Ingegneria Biomedica");
-
 
 		Studente Abba = new Studente(frank.getNome(), frank.getCognome(), frank.getDatanascita(), frank.getIndirizzo(),
 				2, "Ingegneria Informatica");
@@ -74,16 +64,12 @@ public class Client {
 		System.out.println("\n\n");
 		System.out.println(Abba);
 
-
-		
-
 		System.out.print("\n\n\n");
 		Studente_Titoli titoli = new Studente_Titoli();
 		titoli.aggiungiStudente(Abba);
 		titoli.aggiungiStudente(Silvio);
 		titoli.aggiungiStudente(eman);
 		System.out.println(titoli.studentiConUnTitolo());
-
 
 	}
 
