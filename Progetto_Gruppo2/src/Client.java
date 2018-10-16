@@ -3,10 +3,15 @@ public class Client {
 
 	public static void main(String[] args) {
 		
+		Indirizzo ind=new Indirizzo(10,"via bari",28,72013,"Ceglie Messapica","br","puglia");
+		Persona p = new Persona("sergio","santoro","21/12/1991",ind);
 		
-		
-		//Persona p_Daniela= new Persona("Daniela", "Guardabascio", "19 settembre 1985", "Via Monticchio 4/B");
-		
+		System.out.println(p.getNome());
+		System.out.println(p.getCognome());
+		System.out.println(p.getDataNascita());
+		System.out.println(p.getIndirizzo().getVia());
+		System.out.println(p.getIndirizzo().getNumerocivvico());
+
 
 	}
 
