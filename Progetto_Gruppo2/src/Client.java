@@ -35,7 +35,7 @@ public class Client {
 		Persona p_Daniela = new Persona("Daniela", "Guardabascio", "19/09/1985", i_Daniela);
 		corsi_D.add("Informatici senza frontiere");
 		corsi_D.add("Calma");
-		Studente st_Danielaa = new Studente("Daniela", "Guardabascio",  "19 settembre 1985", i_Daniela, 2, "Ingegenria Informatica", corsi_D);
+		Studente st_Danielaa = new Studente("Daniela", "Guardabascio",  "19/09/1985", i_Daniela, 2, "Ingegenria Informatica", corsi_D);
 		lista_studenti_Daniela.add(st_Danielaa);
 		
 		System.out.println("Dati Anagrafici");
@@ -63,9 +63,9 @@ public class Client {
 		System.out.println(" ");
 		
 		Indirizzo indirizzo = new Indirizzo (12, "Contrada San Cesareo", 30, 83030, "Zungoli", "AV", "Campania");
-		Persona Chiara = new Persona ("Chiara", "Annicchiarico", "16/04/90", indirizzo);
+		Persona Chiara = new Persona ("Chiara", "Annicchiarico", "16/04/1990", indirizzo);
 		LinkedList<String> corsiFormazione = new LinkedList<String>();
-		Studente s1 = new Studente ("Chiara", "Annicchiarico", "16/04/90", indirizzo, 1, "ingegnere", corsiFormazione );
+		Studente s1 = new Studente ("Chiara", "Annicchiarico", "16/04/1990", indirizzo, 1, "ingegnere", corsiFormazione );
 		lista_studenti_Daniela.add(s1);
 		
 		
@@ -122,8 +122,8 @@ public class Client {
 		filtroDaniela = StudentiConFormazioneDaniela.listaStudentiFormati(lista_studenti_Daniela);
 		System.out.println("Gli studenti con almeno un corso di formazione sono " + filtroDaniela.size());
 		
-		
-		//System.out.println(ClasseRicercaSantoro.CercaGiovane(l));
+		Persona trovata=ClasseRicercaSantoro.CercaGiovane(array1);
+		System.out.println(trovata.getNome());
 	}
 
 }
