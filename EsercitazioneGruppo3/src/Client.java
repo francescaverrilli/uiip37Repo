@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.Vector;
 import java.text.ParseException;
 
@@ -26,7 +27,12 @@ public class Client {
 		v2.add(p2);
 		v2.add(p3);
 		
-		try {
+		LinkedList<Persona> nl= new LinkedList<Persona>();
+		nl.add(p);
+		nl.add(p2);
+		nl.add(p3);
+		
+		/*try {
 			Persona piuGiovane = Caserta.getPersonaPiuGiovane(v2);
 			Persona piuVecchia = Caserta.getPersonaPiuVecchia(v2);
 			System.out.println("La persona più giovane è: " +
@@ -80,7 +86,15 @@ public class Client {
 	System.out.println(new_vett.toString());
 	
 	*/
-		
+		try {
+			Persona piugiovane= Guastaferro.getPersonaPiuGiovane(nl);
+			Persona piuanziano= Guastaferro.getPersonaPiuVecchia(nl);
+			System.out.println("La persona più giovane è : "+piugiovane.getNome()+" "+piugiovane.getCognome()+" "+piugiovane.getData_di_nascita());
+			System.out.println("La persona più anziana è : "+piuanziano.getNome()+" "+piuanziano.getCognome()+" "+piuanziano.getData_di_nascita());
+		}
+		catch (ParseException e){
+			e.printStackTrace();
+		}
 	
 	}
 
