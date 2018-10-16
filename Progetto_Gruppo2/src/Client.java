@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class Client {
 
 	public static void main(String[] args) {
@@ -24,7 +24,13 @@ public class Client {
 		System.out.println(p_Daniela.getCognome());
 		System.out.println(p_Daniela.getDataNascita());
 		System.out.println("Indirizzo:");
-		System.out.println(p_Daniela.getIndirizzo().getVia() + " " + p_Daniela.getIndirizzo().getNumerocivvico() + " " + p_Daniela.getIndirizzo().getCitta());;
+		System.out.println(p_Daniela.getIndirizzo().getVia() + " " + p_Daniela.getIndirizzo().getNumerocivvico() + " " + p_Daniela.getIndirizzo().getCitta());
+		
+		ArrayList<Persona> arr = new ArrayList<Persona>();
+		arr.add(p);
+		arr.add(p_Daniela);
+		
+		ResidentiCampaniaSantoro.Stampa(arr);
 		
 	}
 
