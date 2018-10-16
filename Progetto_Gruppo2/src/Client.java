@@ -20,7 +20,7 @@ public class Client {
 		System.out.println("Indirizzo:");
 		System.out.println(p_Daniela.getIndirizzo().getVia() + " " + p_Daniela.getIndirizzo().getNumerocivvico() + " "
 				+ p_Daniela.getIndirizzo().getCitta());
-		;
+		
 
 		Indirizzo i = new Indirizzo(34, "Via Iscalonga", 70, 83036, "Mirabella Eclano", "AV", "Campania");
 		Persona Angela = new Persona("Angela", "Di Pietro", "11/06/1992", i);
