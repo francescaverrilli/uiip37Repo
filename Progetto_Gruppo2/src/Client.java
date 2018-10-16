@@ -9,17 +9,22 @@ public class Client {
 		LinkedList<String> corsi_D= new LinkedList<String>();
 		
 		
+		LinkedList<String> corsi = new LinkedList<String>();
+		corsi.add("programmazione");
+		corsi.add("Analisi");
+		
 		Indirizzo ind = new Indirizzo(10, "via bari", 28, 72013, "Ceglie Messapica", "br", "puglia");
-		Persona p = new Persona("sergio", "santoro", "21/12/1991", ind);
+		//Persona p = new Persona("sergio", "santoro", "21/12/1991", ind);
+		Studente s = new Studente("sergio", "santoro", "21/12/1991", ind,1,"laurea informatica",corsi);
 		System.out.println(" ");
-		System.out.println(p.getNome());
-		System.out.println(p.getCognome());
-		System.out.println(p.getDataNascita());
-		System.out.println(p.getIndirizzo().getVia());
-		System.out.println(p.getIndirizzo().getNumerocivvico());
+		System.out.println(s.getNome());
+		System.out.println(s.getCognome());
+		System.out.println(s.getDataNascita());
+		System.out.println(s.getIndirizzo().getVia());
+		System.out.println(s.getIndirizzo().getNumerocivvico());
 		
 		
-		elencoPersone.add(p);
+		elencoPersone.add(s);
 		
 		Indirizzo i_Daniela = new Indirizzo(10, "Via Monticchio", 4, 83031, "Ariano Irpino", "AV", "Campania");
 		Persona p_Daniela = new Persona("Daniela", "Guardabascio", "19 settembre 1985", i_Daniela);
@@ -73,7 +78,7 @@ public class Client {
 		System.out.println(" ");
 		System.out.println("Stampa Sergio ");
 		ArrayList<Persona> arr = new ArrayList<Persona>();
-		arr.add(p);
+		arr.add(s);
 		arr.add(p_Daniela);
 		arr.add(Chiara);
 		arr.add(Angela);
@@ -86,14 +91,14 @@ public class Client {
 		array.add(Angela);
 		array.add(p_Daniela);
 		array.add(Chiara);
-		array.add(p);
+		array.add(s);
 		ResidentiCampaniaDiPietro.Stampa(array);
 
 		System.out.println(" ");
 		System.out.println("Stampa Chiara ");
 		elencoPersone.add(Chiara);
 		ArrayList<Persona> array1 = new ArrayList<Persona>();
-		array1.add(p);
+		array1.add(s);
 		array1.add(p_Daniela);
 		array1.add(Chiara);
 		array1.add(Angela);
