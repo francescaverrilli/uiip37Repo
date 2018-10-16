@@ -81,23 +81,22 @@ public class Client {
 		person.add(ema);
 		person.add(frank);
 		person.add(io);
-		
+
 		System.out.println("\n\n\n\n");
-		
+
 		Avallone ava = new Avallone(person);
-		System.out.println("Il più giocane della lista e\n");
+		System.out.println("Il più giovane della lista e\n");
 		System.out.println(ava.trovamin());
 		System.out.println("\nIl più vecchio della lista e\n");
 		System.out.println(ava.trovamax());
 
-		
-		
-
 		// Homework 16/10
 		// Barbato
-		System.out.println("\nLa persona più giovane è: "+ Barbato.cercaGiovane(p).getNome()+" "+ Barbato.cercaGiovane(p).getCognome());
-		
-		System.out.println("\nLa persona più adulta è: "+ Barbato.cercaAdulto(p).getNome()+" "+ Barbato.cercaAdulto(p).getCognome());
+		System.out.println("\nLa persona più giovane è: " + Barbato.cercaGiovane(p).getNome() + " "
+				+ Barbato.cercaGiovane(p).getCognome());
+
+		System.out.println("\nLa persona più adulta è: " + Barbato.cercaAdulto(p).getNome() + " "
+				+ Barbato.cercaAdulto(p).getCognome());
 
 		// Homework 16/10
 		// Abbatangelo
@@ -111,7 +110,6 @@ public class Client {
 		System.out.println("La persona più anziana è: " + Francesco.cercaPersonaAnziana().getNome());
 
 		System.out.print("***********************************************");
-
 
 	}
 
