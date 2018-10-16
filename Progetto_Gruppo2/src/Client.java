@@ -123,6 +123,7 @@ public class Client {
 		filtroDaniela = StudentiConFormazioneDaniela.listaStudentiFormati(lista_studenti_Daniela);
 		System.out.println("Gli studenti con almeno un corso di formazione sono " + filtroDaniela.size());
 		
+
 		
 		Persona trovata=ClasseRicercaSantoro.CercaGiovane(array1);
 		System.out.println(trovata.getNome());
@@ -134,6 +135,16 @@ public class Client {
 		Persona giovane_daniela= Guardabascio_Eta.CercaGiovane_Daniela(elencoPersone);
 		System.out.println("La persona piu  giovane è : " + giovane_daniela.getNome() + " - data di nascita " + giovane_daniela.getDataNascita());
 
+
+
+		Persona trovata=ClasseRicercaSantoro.CercaGiovane(array1);
+		System.out.println(trovata.getNome());
+		
+		Persona cercata=Annicchiarico.CercaGiovane(array1);
+		System.out.println(trovata.getNome());
+		
+		Persona cercato=Annicchiarico.CercaVecchio(array1);
+		System.out.println(trovata.getNome());
 	}
 
 }
