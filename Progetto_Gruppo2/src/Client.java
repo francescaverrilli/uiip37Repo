@@ -123,12 +123,17 @@ public class Client {
 		filtroDaniela = StudentiConFormazioneDaniela.listaStudentiFormati(lista_studenti_Daniela);
 		System.out.println("Gli studenti con almeno un corso di formazione sono " + filtroDaniela.size());
 		
-<<<<<<< HEAD
+		
 		Persona trovata=ClasseRicercaSantoro.CercaGiovane(array1);
 		System.out.println(trovata.getNome());
-=======
+		
+		// Ricerca per eta Daniela
+		Persona vecchia_daniela= Guardabascio_Eta.CercaVecchio_Daniela(elencoPersone);
+		System.out.println("La persona piu  vecchia è : " + vecchia_daniela.getNome() + " - data di nascita " + vecchia_daniela.getDataNascita());
 
->>>>>>> 2de8a632b6b5d8c72264a56fd590c0ff39061cca
+		Persona giovane_daniela= Guardabascio_Eta.CercaGiovane_Daniela(elencoPersone);
+		System.out.println("La persona piu  giovane è : " + giovane_daniela.getNome() + " - data di nascita " + giovane_daniela.getDataNascita());
+
 	}
 
 }

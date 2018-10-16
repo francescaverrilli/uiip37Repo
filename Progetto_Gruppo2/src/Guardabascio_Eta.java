@@ -1,24 +1,34 @@
 import java.util.LinkedList;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 
 public class Guardabascio_Eta {
 
-	public static void calcolaPiuGrande (LinkedList<Persona> list_Persona) throws Exception {
-		Persona p_Maggiore= new Persona();
-		for (int i = 1; i<list_Persona.size(); i++) {
-			//Date date0=new SimpleDateFormat("dd/MM/yyyy").parse(list_Persona.get(i-1).getDataNascita());
-			//Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(list_Persona.get(i).getDataNascita());
-			if(date0.before(date1)) {
-				p_Maggiore=list_Persona.get(i);
+	public static Persona CercaGiovane_Daniela(LinkedList<Persona> array1){
+		Persona a=array1.get(0);
+		Date min=a.getDataNascita();
+		for(Persona p:array1) {
+			if(p.getDataNascita().after(min)) {
+				min=p.getDataNascita();
+				a=p;
 			}
-			else {
-				p_Maggiore=list_Persona.get(i-1);
-			}
-			
 		}
-		System.out.println("La piu grande " + p_Maggiore.getNome());
+		return a;
+	}
+	
+	
+	public static Persona CercaVecchio_Daniela(LinkedList<Persona> array1){
+		Persona a=array1.get(0);
+		Date min=a.getDataNascita();
+		for(Persona p:array1) {
+			if(p.getDataNascita().before(min)) {
+				min=p.getDataNascita();
+				a=p;
+			}
+		}
+		return a;
 	}
 }
