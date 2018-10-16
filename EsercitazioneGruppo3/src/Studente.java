@@ -1,3 +1,4 @@
+import java.text.ParseException;
 import java.util.Vector;
 
 public class Studente extends Persona{
@@ -7,7 +8,7 @@ public class Studente extends Persona{
 	private Vector<String> corsiFormazione;
 
 	public Studente(String nome, String cognome, String data_di_nascita, Indirizzo indirizzo,
-			String titoloDiStudio, int livelloLaurea, Vector<String> corsiFormazione) {
+			String titoloDiStudio, int livelloLaurea, Vector<String> corsiFormazione) throws ParseException {
 		super(nome, cognome, data_di_nascita, indirizzo);
 		this.titoloDiStudio=titoloDiStudio;
 		this.livelloLaurea=livelloLaurea;

@@ -1,16 +1,19 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Persona {
 
 	private String nome;
 	private String cognome;
-	private String data_di_nascita;
+	private Date data_di_nascita;
 	private Indirizzo nuovo_indirizzo;
 	
-	public Persona(String nome, String cognome, String data_di_nascita , Indirizzo indirizzo) {
+	public Persona(String nome, String cognome, String data_di_nascita , Indirizzo indirizzo) throws ParseException {
 		
 		this.nome=nome;
 		this.cognome=cognome;
-		this.data_di_nascita=data_di_nascita;
+		this.data_di_nascita=new SimpleDateFormat("dd/MM/yyyy").parse(data_di_nascita);
 		this.nuovo_indirizzo=indirizzo;
 		
 	}
@@ -31,11 +34,11 @@ public class Persona {
 		this.cognome = cognome;
 	}
 
-	public String getData_di_nascita() {
+	public Date getData_di_nascita() {
 		return data_di_nascita;
 	}
 
-	public void setData_di_nascita(String data_di_nascita) {
+	public void setData_di_nascita(Date data_di_nascita) {
 		this.data_di_nascita = data_di_nascita;
 	}
 

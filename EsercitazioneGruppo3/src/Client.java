@@ -1,9 +1,10 @@
 import java.util.Vector;
+import java.text.ParseException;
 import java.util.LinkedList;
 
 public class Client {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
 
 
@@ -26,6 +27,19 @@ public class Client {
 		v2.add(p2);
 		v2.add(p3);
 		
+		try {
+			Persona piuGiovane = Caserta.getPersonaPiuGiovane(v2);
+			Persona piuVecchia = Caserta.getPersonaPiuVecchia(v2);
+			System.out.println("La persona più giovane è: " +
+			"\n" + piuGiovane);
+			
+			System.out.println("La persona più vecchia è: " +
+					"\n" + piuVecchia);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		/*
 		//ResidentiCampaniaVIncenzo.stampaResidentiCampania(v2);
 		
 
@@ -65,6 +79,9 @@ public class Client {
 	new_vett= rsa.cerca_studente(vett_or);
 	
 	System.out.println(new_vett.toString());
+	
+	*/
+		
 	
 	}
 
