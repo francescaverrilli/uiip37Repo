@@ -4,7 +4,9 @@ public class Client {
 	public static void main(String[] args) {
 		
 		
-		System.out.println("Sei dentro il Main del Gruppo2");
+		
+		//Persona p_Daniela= new Persona("Daniela", "Guardabascio", "19 settembre 1985", "Via Monticchio 4/B");
+		
 
 	}
 
