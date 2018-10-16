@@ -35,6 +35,12 @@ public class Studente extends Persona{
 	public void setCorsiFormazione(LinkedList<String> corsiFormazione) {
 		this.corsiFormazione = corsiFormazione;
 	}
+
+	@Override
+	public String toString() {
+		return "Studente [titoloDiStudio=" + titoloDiStudio + ", livelloLaurea=" + livelloLaurea + ", corsiFormazione="
+				+ corsiFormazione + "]";
+	}
 	
 	
 	
