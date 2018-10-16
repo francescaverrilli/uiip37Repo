@@ -18,6 +18,8 @@ public class Client {
 		Indirizzo myIndirizzo = new Indirizzo("C/da Pino", 9, "Benevento", 82110, "BN", "Campania");
 		// String nome, String cognome, String datanascita, String indirizzo
 		Persona io = new Persona("Silvio", "Barbato", "06/09/1991", myIndirizzo);
+		Studente Silvio = new Studente(io.getNome(), io.getCognome(), io.getDatanascita(), io.getIndirizzo(), 1,
+				"Ingegneria Energetica");
 
 		System.out.print(io);
 
@@ -48,11 +50,26 @@ public class Client {
 		LinkedList<Persona> campani = res.trovapersone();
 		System.out.println(campani);
 
-		System.out.print(elenco.residentiCampaniaFrank());
+		System.out.println(elenco.residentiCampaniaFrank());
 		// <------------------------------------------------------------------------------------------>
 
+<<<<<<< HEAD
 		Studente Abba = new Studente(frank.getNome(),frank.getCognome(),frank.getDatanascita(),frank.getIndirizzo(),2,"Ingegneria Informatica");
 		Studente eman = new Studente("Emanuele","Avallone","18/05/1992",ind1,1,"Ingegneria Biomedica");
+=======
+		Studente Abba = new Studente(frank.getNome(), frank.getCognome(), frank.getDatanascita(), frank.getIndirizzo(),
+				2, "Ingegneria Informatica");
+		Abba.aggiungiCorso("UIIP");
+		System.out.println("\n\n");
+		System.out.println(Abba);
+		
+		System.out.print("\n\n\n");
+		Studente_Titoli titoli = new Studente_Titoli();
+		titoli.aggiungiStudente(Abba);
+		titoli.aggiungiStudente(Silvio);
+		System.out.println(titoli.studentiConUnTitolo());
+
+>>>>>>> 6e04c3c41bfdf371af5c0756da1b4fadf369b769
 	}
 
 }
