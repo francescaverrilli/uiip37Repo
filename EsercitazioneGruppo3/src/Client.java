@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.Vector;
 
 public class Client {
 	
@@ -14,14 +14,17 @@ public class Client {
 				new Indirizzo("Via cesinola", 2, "S. Martino V.C.", "83018", "AV", "Campania"));
 
 		
-		Indirizzo indirizzo= new Indirizzo("Via f. Tedesco",39,"Taurasi","83030","Avellino","Campania");
+		Indirizzo indirizzo= new Indirizzo("Via f. Tedesco",39,"Taurasi","83030","Avellino","Lazio");
 		Persona p3 = new Persona("Andrea","Guastaferro","24/09/91",indirizzo);
 		
-		System.out.println(p);
-
-		System.out.println(p2);
-
-		System.out.println(p3.toString());
+		
+		
+		Vector<Persona> v = new Vector<Persona>();
+		v.add(p);
+		v.add(p2);
+		v.add(p3);
+		
+		ResidentiCampaniaVIncenzo.stampaResidentiCampania(v);
 		
 		/*LinkedList<Persona>lista_persone =new LinkedList<Persona>();
 		ResidentiCampaniaAndrea rsa = new ResidentiCampaniaAndrea(lista_persone);

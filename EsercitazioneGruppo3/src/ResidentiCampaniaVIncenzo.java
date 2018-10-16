@@ -6,7 +6,7 @@ public class ResidentiCampaniaVIncenzo {
 		
 		for(Persona p: persone) {
 			if(p.getNuovo_indirizzo().getRegione().equalsIgnoreCase("Campania")) {
-				System.out.println(p);
+				System.out.println(p + "\n");
 			}	
 		}
 	}
