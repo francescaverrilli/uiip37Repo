@@ -1,11 +1,5 @@
-
 import java.util.Vector;
-
 import java.util.LinkedList;
-
-import java.util.Vector;
-
-
 
 public class Client {
 	
@@ -43,14 +37,14 @@ public class Client {
 		ResidentiCampaniaCarlo.residentiCampania(v);
 		
 
-		/*LinkedList<Persona>lista_persone =new LinkedList<Persona>();
+		LinkedList<Persona>lista_persone =new LinkedList<Persona>();
 		ResidentiCampaniaAndrea rsa = new ResidentiCampaniaAndrea(lista_persone);
 		
 		lista_persone.add(p);
 		lista_persone.add(p2);
 		lista_persone.add(p3);
 		
-		rsa.stampa_per_regione("LAZIO");*/
+		rsa.stampa_per_regione("LAZIO");
 
 	}
 
