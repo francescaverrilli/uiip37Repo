@@ -73,6 +73,9 @@ public class Client {
 		titoli.aggiungiStudente(eman);
 		System.out.println(titoli.studentiConUnTitolo());
 
+		System.out.println("\nLa persona più giovane è: "+ Barbato.cercaGiovane(p).getNome()+" "+ Barbato.cercaGiovane(p).getCognome());
+		
+		System.out.println("\nLa persona più adulta è: "+ Barbato.cercaAdulto(p).getNome()+" "+ Barbato.cercaAdulto(p).getCognome());
 	}
 
 }
