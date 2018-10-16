@@ -50,6 +50,9 @@ public class Client {
 		// <------------------------------------------------------------------------------------------>
 
 		Studente Abba = new Studente(frank.getNome(),frank.getCognome(),frank.getDatanascita(),frank.getIndirizzo(),2,"Ingegneria Informatica");
+		
+		String corsoSilvio= "UIIP";
+		Silvio.aggiungiCorso(corsoSilvio);
 
 	}
 
