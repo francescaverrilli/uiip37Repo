@@ -7,9 +7,8 @@ import java.util.Vector;
 public class Client {
 
 	public static void main(String[] args) {
-		String corso="elettrotecnica";
-		
-		
+		String corso = "elettrotecnica";
+
 		Indirizzo ind1 = new Indirizzo("Via del Tintoretto", 28, "Modena", 41100, "MO", "Emilia Romagna");
 		Persona ema = new Persona("Emanuele", "Avallone", "18/05/1992", ind1);
 		System.out.println(ema);
@@ -55,6 +54,7 @@ public class Client {
 
 
 
+
 		
 		
 		String corsoSilvio= "UIIP";
@@ -63,7 +63,10 @@ public class Client {
 
 
 		
-		Studente eman = new Studente("Emanuele","Avallone","18/05/1992",ind1,1,"Ingegneria Biomedica");
+		
+
+		Studente eman = new Studente("Emanuele", "Avallone", "18/05/1992", ind1, 1, "Ingegneria Biomedica");
+
 
 		Studente Abba = new Studente(frank.getNome(), frank.getCognome(), frank.getDatanascita(), frank.getIndirizzo(),
 				2, "Ingegneria Informatica");
@@ -71,11 +74,14 @@ public class Client {
 		System.out.println("\n\n");
 		System.out.println(Abba);
 
+
 		
+
 		System.out.print("\n\n\n");
 		Studente_Titoli titoli = new Studente_Titoli();
 		titoli.aggiungiStudente(Abba);
 		titoli.aggiungiStudente(Silvio);
+		titoli.aggiungiStudente(eman);
 		System.out.println(titoli.studentiConUnTitolo());
 
 
