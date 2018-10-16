@@ -1,8 +1,10 @@
+import java.text.ParseException;
 import java.util.*;
 
 public class Client {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws ParseException {
+
 		LinkedList<Persona> elencoPersone = new LinkedList<Persona>();
 		LinkedList<String> corsi_D= new LinkedList<String>();
 		LinkedList<Studente> lista_studenti_Daniela = new LinkedList<Studente>();
@@ -121,7 +123,7 @@ public class Client {
 		filtroDaniela = StudentiConFormazioneDaniela.listaStudentiFormati(lista_studenti_Daniela);
 		System.out.println("Gli studenti con almeno un corso di formazione sono " + filtroDaniela.size());
 		
-		Guardabascio_Eta.calcolaPiuGrande(elencoPersone);
+
 	}
 
 }
