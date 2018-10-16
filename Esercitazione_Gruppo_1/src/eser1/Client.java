@@ -73,7 +73,7 @@ public class Client {
 		titoli.aggiungiStudente(Silvio);
 		titoli.aggiungiStudente(eman);
 		System.out.println(titoli.studentiConUnTitolo());
-<<<<<<< HEAD
+
 		// trova la persona piu giovane(di emanuele)
 
 		// aggiunta oggetto della classe Avallone
@@ -89,7 +89,7 @@ public class Client {
 		System.out.println(ava.trovamin());
 		System.out.println("\nIl più vecchio della lista e\n");
 		System.out.println(ava.trovamax());
-=======
+
 		
 		
 
@@ -112,7 +112,7 @@ public class Client {
 
 		System.out.print("***********************************************");
 
->>>>>>> 5e94fc3b9eb55893f42786a4a84644970bf3954b
+
 	}
 
 }
