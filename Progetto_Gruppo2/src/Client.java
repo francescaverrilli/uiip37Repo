@@ -126,7 +126,10 @@ public class Client {
 
 
 		Persona trovata=ClasseRicercaSantoro.CercaGiovane(array1);
-		System.out.println(trovata.getNome());
+		System.out.println("Metodo Sergio: "+trovata.getNome());
+		
+		Persona trovatovecchio=ClasseRicercaSantoro.CercaVecchio(array1);
+		System.out.println("Metodo Sergio: "+trovatovecchio.getNome());
 		
 		Persona wanted=DiPietro.tryYoung(array);
 		System.out.println(wanted.getNome());
