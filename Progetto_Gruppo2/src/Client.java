@@ -1,11 +1,12 @@
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Client {
 
 	public static void main(String[] args) {
 		LinkedList<Persona> elencoPersone = new LinkedList<Persona>();
-		
+		LinkedList<String> corsi_D= new LinkedList<String>();
 		
 		
 		LinkedList<String> corsi = new LinkedList<String>();
@@ -30,6 +31,10 @@ public class Client {
 		
 		Indirizzo i_Daniela = new Indirizzo(10, "Via Monticchio", 4, 83031, "Ariano Irpino", "AV", "Campania");
 		Persona p_Daniela = new Persona("Daniela", "Guardabascio", "19 settembre 1985", i_Daniela);
+		corsi_D.add("Informatici senza frontiere");
+		corsi_D.add("Calma");
+		Studente st_Danielaa = new Studente("Daniela", "Guardabascio",  "19 settembre 1985", i_Daniela, 2, "Ingegenria Informatica", corsi_D);
+		
 		System.out.println("Dati Anagrafici");
 		System.out.println(p_Daniela.getNome());
 		System.out.println(p_Daniela.getCognome());
@@ -55,6 +60,9 @@ public class Client {
 		
 		Indirizzo indirizzo = new Indirizzo (12, "Contrada San Cesareo", 30, 83030, "Zungoli", "AV", "Campania");
 		Persona Chiara = new Persona ("Chiara", "Annicchiarico", "16/04/90", indirizzo);
+		LinkedList<String> corsiFormazione = new LinkedList<String>();
+		Studente s1 = new Studente ("Chiara", "Annicchiarico", "16/04/90", indirizzo, 1, "ingegnere", corsiFormazione );
+		
 		System.out.println("Dati Anagrafici");
 		System.out.println(Chiara.getNome());
 		System.out.println(Chiara.getCognome());
@@ -101,7 +109,11 @@ public class Client {
 		array1.add(Chiara);
 		array1.add(Angela);
 		ResidentiCampaniaAnnicchiarico.Stampa(array1);
+		
+		
 
+		
+		
 	}
 
 }
