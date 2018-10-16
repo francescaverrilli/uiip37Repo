@@ -3,6 +3,7 @@ import java.util.LinkedList;
 public class Main {
 
 	public static void main(String[] args) {
+
 		
 		LinkedList<Prodotto> lista_Daniela= new LinkedList<Prodotto>();
 		double tot_daniela= 0;
@@ -16,6 +17,12 @@ public class Main {
 		Scontrino scontrino_d= new Scontrino("1234", c_daniela, lista_Daniela, tot_daniela);
 		
 		System.out.println(scontrino_d.toString());
+
+
+		Cliente c1 = new Cliente ("c123", "Chiara", "Annicchiarico", 230 );
+		
+		Prodotto p1 = new Prodotto (54, "prodotto1", 23, 25);
+		Prodotto p2 = new Prodotto (37, "prodotto2", 12, 11);
 
 	}
 
