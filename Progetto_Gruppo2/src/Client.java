@@ -124,6 +124,7 @@ public class Client {
 		System.out.println("Gli studenti con almeno un corso di formazione sono " + filtroDaniela.size());
 		
 
+<<<<<<< HEAD
 		Persona trovata=ClasseRicercaSantoro.CercaGiovane(array1);
 		System.out.println(trovata.getNome());
 		
@@ -133,6 +134,26 @@ public class Client {
 		Persona wanted1=DiPietro.tryOld(array);
 		System.out.println(wanted1.getNome());
 
+=======
+		
+		Persona trovata=ClasseRicercaSantoro.CercaGiovane(array1);
+		System.out.println(trovata.getNome());
+		
+		// Ricerca per eta Daniela
+		Persona vecchia_daniela= Guardabascio_Eta.CercaVecchio_Daniela(elencoPersone);
+		System.out.println("La persona piu  vecchia è : " + vecchia_daniela.getNome() + " - data di nascita " + vecchia_daniela.getDataNascita());
+
+		Persona giovane_daniela= Guardabascio_Eta.CercaGiovane_Daniela(elencoPersone);
+		System.out.println("La persona piu  giovane è : " + giovane_daniela.getNome() + " - data di nascita " + giovane_daniela.getDataNascita());
+
+		
+		Persona cercata=Annicchiarico.CercaGiovane(array1);
+		System.out.println(cercata.getNome());
+		
+		Persona cercato=Annicchiarico.CercaVecchio(array1);
+		System.out.println(cercato.getNome());
+	}
+>>>>>>> f6943e1f3f57a90f75a633869bc685af9138ec19
 
 	}
 }

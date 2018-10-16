@@ -1,13 +1,15 @@
-import java.util.LinkedList;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.*;
+
+public class Annicchiarico {
 
 
-public class Guardabascio_Eta {
 
-	public static Persona CercaGiovane_Daniela(LinkedList<Persona> array1){
+
+	
+	
+	public static Persona CercaGiovane(ArrayList<Persona> array1){
 		Persona a=array1.get(0);
 		Date min=a.getDataNascita();
 		for(Persona p:array1) {
@@ -20,7 +22,7 @@ public class Guardabascio_Eta {
 	}
 	
 	
-	public static Persona CercaVecchio_Daniela(LinkedList<Persona> array1){
+	public static Persona CercaVecchio(ArrayList<Persona> array1){
 		Persona a=array1.get(0);
 		Date min=a.getDataNascita();
 		for(Persona p:array1) {
@@ -31,4 +33,5 @@ public class Guardabascio_Eta {
 		}
 		return a;
 	}
+
 }
