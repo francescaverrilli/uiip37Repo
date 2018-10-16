@@ -15,7 +15,8 @@ public class Client {
 		Indirizzo myIndirizzo = new Indirizzo("C/da Pino", 9, "Benevento", 82110, "BN", "Campania");
 		// String nome, String cognome, String datanascita, String indirizzo
 		Persona io = new Persona("Silvio", "Barbato", "06/09/1991", myIndirizzo);
-		Studente Silvio= new Studente(io.getNome(), io.getCognome(), io.getDatanascita(), io.getIndirizzo(), 1, "Ingegneria Energetica");
+		Studente Silvio = new Studente(io.getNome(), io.getCognome(), io.getDatanascita(), io.getIndirizzo(), 1,
+				"Ingegneria Energetica");
 
 		System.out.print(io);
 
@@ -54,6 +55,13 @@ public class Client {
 		Abba.aggiungiCorso("UIIP");
 		System.out.println("\n\n");
 		System.out.println(Abba);
+		
+		System.out.print("\n\n\n");
+		Studente_Titoli titoli = new Studente_Titoli();
+		titoli.aggiungiStudente(Abba);
+		titoli.aggiungiStudente(Silvio);
+		System.out.println(titoli.studentiConUnTitolo());
+
 	}
 
 }
