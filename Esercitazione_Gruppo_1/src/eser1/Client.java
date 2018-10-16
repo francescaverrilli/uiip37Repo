@@ -7,6 +7,9 @@ import java.util.Vector;
 public class Client {
 
 	public static void main(String[] args) {
+		String corso="elettrotecnica";
+		
+		
 		Indirizzo ind1 = new Indirizzo("Via del Tintoretto", 28, "Modena", 41100, "MO", "Emilia Romagna");
 		Persona ema = new Persona("Emanuele", "Avallone", "18/05/1992", ind1);
 		System.out.println(ema);
@@ -49,7 +52,7 @@ public class Client {
 		// <------------------------------------------------------------------------------------------>
 
 		Studente Abba = new Studente(frank.getNome(),frank.getCognome(),frank.getDatanascita(),frank.getIndirizzo(),2,"Ingegneria Informatica");
-
+		Studente eman = new Studente("Emanuele","Avallone","18/05/1992",ind1,1,"Ingegneria Biomedica");
 	}
 
 }
