@@ -2,9 +2,7 @@ package eser1;
 
 import java.util.LinkedList;
 
-
 import java.util.Vector;
-
 
 public class Client {
 
@@ -25,33 +23,32 @@ public class Client {
 		Persona frank = new Persona("Francesco", "Abbatangelo", "10/05/1991", indirizzo);
 		System.out.print(frank);
 
-		
-		Vector<Persona> p= new Vector<Persona>();
+		Vector<Persona> p = new Vector<Persona>();
 		p.add(io);
 		p.add(ema);
 		p.add(frank);
-		
-		System.out.print("\n"+ResidentiCampaniaSilvio.trovaResidentiCampania(p));
-		
+
+		System.out.print("\n" + ResidentiCampaniaSilvio.trovaResidentiCampania(p));
 
 		System.out.print("\n\n\n");
 		Residenti_Campania_Frank elenco = new Residenti_Campania_Frank();
 		elenco.aggiungiPersona(ema);
 		elenco.aggiungiPersona(io);
 		elenco.aggiungiPersona(frank);
-		LinkedList<Persona> citt= new LinkedList<Persona>();
-		
-	
+		LinkedList<Persona> citt = new LinkedList<Persona>();
+
 		citt.add(io);
 		citt.add(ema);
 		citt.add(frank);
-		
-		
-		ResidentiCampaniaEma res= new ResidentiCampaniaEma(citt);
-		LinkedList<Persona> campani=res.trovapersone();
+
+		ResidentiCampaniaEma res = new ResidentiCampaniaEma(citt);
+		LinkedList<Persona> campani = res.trovapersone();
 		System.out.println(campani);
 
 		System.out.print(elenco.residentiCampaniaFrank());
+		// <------------------------------------------------------------------------------------------>
+
+		Studente Abba = new Studente(frank.getNome(),frank.getCognome(),frank.getDatanascita(),frank.getIndirizzo(),2,"Ingegneria Informatica");
 
 	}
 

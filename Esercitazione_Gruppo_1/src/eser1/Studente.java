@@ -15,6 +15,10 @@ public class Studente extends Persona {
 
 	}
 
+	public void aggiungiCorso(String corso) {
+		this.corsi.add(corso);
+	}
+
 	public int getLivello() {
 		return livello;
 	}
