@@ -1,18 +1,16 @@
-CREATE DATABASE IF NOT EXISTS aereoporto
+CREATE DATABASE IF NOT EXISTS aeroporto
 	DEFAULT CHARACTER SET latin1
 	DEFAULT COLLATE latin1_general_ci;
     
-USE aereoporto;
+USE aeroporto;
 
-CREATE TABLE IF NOT EXISTS aereoporto(
+CREATE TABLE IF NOT EXISTS aeroporto(
 	citta varchar(20) NOT NULL ,
 	nazione varchar(20) NOT NULL,
-    npiste int NOT NULL,
+    npiste int,
 	primary key(citta)
 );
 
-# tipoAereo 4
-# quantitaMerci
 CREATE TABLE IF NOT EXISTS aereo(
 	tipoAereo varchar(4) NOT NULL ,
 	nPass int NOT NULL,
