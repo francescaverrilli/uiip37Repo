@@ -538,10 +538,6 @@ select candidato.nome,candidato.cognome, telefono.numero from candidato left joi
 telefono on candidato.codice=telefono.candidato;
 
 
-select candidato.nome,candidato.cognome,count(istruzione.codice) as num from candidato,istruzione,titolostudio
-where candidato.codice=istruzione.candidato and istruzione.titolo=titolostudio.codice
-having num>=2;
-
 select candidato.nome,candidato.cognome,count(*) as num 
 from candidato,titolostudio,istruzione where istruzione.candidato=candidato.codice and
 istruzione.titolo=titolostudio.codice group by istruzione.candidato having num>=2;
