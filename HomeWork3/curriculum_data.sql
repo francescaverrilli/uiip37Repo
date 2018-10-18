@@ -11,7 +11,6 @@ INSERT INTO candidato (codice,cognome,nome,viaresidenza,capresidenza,cittareside
 INSERT INTO telefono (numero,candidato) VALUES ('3208072990', 1);
 INSERT INTO telefono (numero,candidato) VALUES ('3203452234', 2);
 INSERT INTO telefono (numero,candidato) VALUES ('5467834232', 3);
-INSERT INTO telefono (numero,candidato) VALUES ('5467834232', 3);
 
 INSERT INTO attivita (codice,mansione) VALUES (23, 'Programmatore');
 INSERT INTO attivita (codice,mansione) VALUES (11, 'HR');
