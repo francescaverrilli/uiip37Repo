@@ -1,0 +1,4 @@
+String query = "UPDATE volo set cittaPart='" + volo.getCittaPart() + "', cittaArr='" + volo.getCittaArr() + 
+				"', tipoAereo='" + volo.getTipoAereo() + "', oraPartenza=" + volo.getOraPartenza() + 
+				", oraArrivo=" + volo.getOraArrivo() 
+				+" WHERE idVolo=" +tipo+ " AND giornoSett='" + tipo2 + "'";
