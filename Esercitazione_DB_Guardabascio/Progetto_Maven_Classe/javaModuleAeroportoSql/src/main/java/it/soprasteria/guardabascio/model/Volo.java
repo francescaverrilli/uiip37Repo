@@ -83,7 +83,7 @@ public class Volo {
 	public String toString() {
 		return "Volo [idVolo=" + idVolo + ", giornoSett=" + giornoSett + ", cittaPart=" + cittaPart + ", cittaArr="
 				+ cittaArr + ", tipoAereo=" + tipoAereo + ", oraParteza=" + oraParteza + ", oraArrivo=" + oraArrivo
-				+ "]";
+				+ "]\n";
 	}
 	
 	
