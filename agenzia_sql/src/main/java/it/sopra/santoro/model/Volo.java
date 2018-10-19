@@ -7,8 +7,8 @@ public class Volo {
 	String cittaPart;
 	String cittaArr;
 	String tipoAereo;
-	int dataPart;
-	int dataArr;
+	int oraPart;
+	int oraArr;
 	
 	public Volo(int id_volo, String giornoSett, String cittaPart, String cittaArr, String tipoAereo, int dataPart,
 			int dataArr) {
@@ -18,8 +18,8 @@ public class Volo {
 		this.cittaPart = cittaPart;
 		this.cittaArr = cittaArr;
 		this.tipoAereo = tipoAereo;
-		this.dataPart = dataPart;
-		this.dataArr = dataArr;
+		this.oraPart = dataPart;
+		this.oraArr = dataArr;
 	}
 
 	public int getId_volo() {
@@ -62,20 +62,20 @@ public class Volo {
 		this.tipoAereo = tipoAereo;
 	}
 
-	public int getDataPart() {
-		return dataPart;
+	public int getOraPart() {
+		return oraPart;
 	}
 
-	public void setDataPart(int dataPart) {
-		this.dataPart = dataPart;
+	public void setOraPart(int dataPart) {
+		this.oraPart = dataPart;
 	}
 
-	public int getDataArr() {
-		return dataArr;
+	public int getOraArr() {
+		return oraArr;
 	}
 
-	public void setDataArr(int dataArr) {
-		this.dataArr = dataArr;
+	public void setOraArr(int dataArr) {
+		this.oraArr = dataArr;
 	}
 	
 	

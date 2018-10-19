@@ -7,15 +7,15 @@ import java.sql.Statement;
 import com.mysql.jdbc.Connection;
 
 import it.sopra.santoro.ConnectionManager;
-import it.sopra.santoro.dao.AereoDao;
+import it.sopra.santoro.dao.AereoportoDao;
 import it.sopra.santoro.model.Aereo;
+import it.sopra.santoro.model.Aereoporto;
 
-public class Default_Aereo_Dao implements AereoDao{
+public class Default_Aereoporto_Dao implements AereoportoDao{
 	
-	public void insert (Aereo aereo) {
+	public void insert (Aereoporto aereoporto) {
 		Connection conn;
-		String query="INSERT IGNORE INTO AEREO VALUES('"+aereo.getTipoAereo()+"',"+aereo.getNpass()+","+
-		aereo.getQuantit‡Merci()+")";
+		String query="INSERT IGNORE INTO AEREOPORTO VALUES('"+aereoporto.getCitta()+"','"+aereoporto.getNazione()+"','"+aereoporto.getNpiste()+"'"+")";
 		
 		try {
 			
@@ -32,20 +32,19 @@ public class Default_Aereo_Dao implements AereoDao{
 		
 	}
 	
-	public Aereo selectByTipo(String tipo) {
-		
-		Aereo a = null;
+	public Aereoporto selectByTipo(String citta) {
+		Aereoporto a = null;
 		Connection conn;
-		String query="Select *from Aereo where tipoAereo='"+tipo+"'";
+		String query="Select *from Aereoporto where citta='"+citta+"'";
 		try {
 			conn=(Connection) ConnectionManager.getConnection();
 			Statement statement = conn.createStatement();
 			ResultSet rs=statement.executeQuery(query);
 			if(rs.next()) {
-				String tipoAereo = rs.getString("tipoAereo");
-				int passeggeri = rs.getInt("nPass");
-				int merci = rs.getInt("quantitaMerci");
-				a = new Aereo(tipoAereo,passeggeri,merci);
+				String citta1 = rs.getString("citta");
+				String nazione  = rs.getString("nazione");
+				int npiste = rs.getInt("npiste");
+				a = new Aereoporto(citta1,nazione,npiste);
 			}
 			
 			conn.close();
@@ -59,14 +58,16 @@ public class Default_Aereo_Dao implements AereoDao{
 		}
 		
 		return a;
+
 		
 	}
 	
 	
-	public void update(String tipo,Aereo aereo) {
-		Aereo a = null;
+	public void update(String nomecitta,Aereoporto aereoporto) {
+		
+		Aereoporto a = null;
 		Connection conn;
-		String query="Update aereo set nPass='"+aereo.getNpass()+"' where tipoAereo='"+tipo+"'";
+		String query="Update aereoporto set npiste='"+aereoporto.getNpiste()+"' where citta='"+nomecitta+"'";
 		
 		
 		try {
@@ -86,4 +87,6 @@ public class Default_Aereo_Dao implements AereoDao{
 		}
 		
 	}
+	
+
 }

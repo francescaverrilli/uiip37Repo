@@ -7,15 +7,16 @@ import java.sql.Statement;
 import com.mysql.jdbc.Connection;
 
 import it.sopra.santoro.ConnectionManager;
-import it.sopra.santoro.dao.AereoDao;
-import it.sopra.santoro.model.Aereo;
+import it.sopra.santoro.dao.VoloDao;
+import it.sopra.santoro.model.Aereoporto;
+import it.sopra.santoro.model.Volo;
 
-public class Default_Aereo_Dao implements AereoDao{
+public class Default_Volo_Dao implements VoloDao{
 	
-	public void insert (Aereo aereo) {
+
+	public void insert(Volo volo) {
 		Connection conn;
-		String query="INSERT IGNORE INTO AEREO VALUES('"+aereo.getTipoAereo()+"',"+aereo.getNpass()+","+
-		aereo.getQuantit‡Merci()+")";
+		String query="INSERT IGNORE INTO VOLO VALUES('"+volo.getId_volo()+"','"+volo.getGiornoSett()+"','"+volo.getCittaPart()+"','"+volo.getCittaArr()+"','"+volo.getTipoAereo()+"','"+volo.getOraPart()+"','"+volo.getOraArr()+"'"+")";
 		
 		try {
 			
@@ -31,21 +32,24 @@ public class Default_Aereo_Dao implements AereoDao{
 		}
 		
 	}
-	
-	public Aereo selectByTipo(String tipo) {
+	public Volo selectByTipo(int idVolo, String giornoSett) {
 		
-		Aereo a = null;
+		Volo a = null;
 		Connection conn;
-		String query="Select *from Aereo where tipoAereo='"+tipo+"'";
+		String query="Select *from volo where idVolo='"+idVolo+"' and giornoSett='"+giornoSett+"'";
 		try {
 			conn=(Connection) ConnectionManager.getConnection();
 			Statement statement = conn.createStatement();
 			ResultSet rs=statement.executeQuery(query);
 			if(rs.next()) {
+				int idVolo1 = rs.getInt("idVolo");
+				String giornoSett1  = rs.getString("giornoSett");
+				String cittaPart  = rs.getString("cittaPart");
+				String cittaArr  = rs.getString("cittaArr");
 				String tipoAereo = rs.getString("tipoAereo");
-				int passeggeri = rs.getInt("nPass");
-				int merci = rs.getInt("quantitaMerci");
-				a = new Aereo(tipoAereo,passeggeri,merci);
+				int oraPartenza = rs.getInt("oraPartenza");
+				int oraArrivo = rs.getInt("oraArrivo");
+				a = new Volo(idVolo1,giornoSett1,cittaPart,cittaArr,tipoAereo,oraPartenza,oraArrivo);
 			}
 			
 			conn.close();
@@ -60,13 +64,15 @@ public class Default_Aereo_Dao implements AereoDao{
 		
 		return a;
 		
+		
+		
+		
 	}
-	
-	
-	public void update(String tipo,Aereo aereo) {
-		Aereo a = null;
+	public void update(int idVolo, String giornoSett, int oraPartenza) {
+		
+		Volo a = null;
 		Connection conn;
-		String query="Update aereo set nPass='"+aereo.getNpass()+"' where tipoAereo='"+tipo+"'";
+		String query="Update Volo set oraPartenza='"+oraPartenza+"' where idVolo='"+idVolo+"' and giornoSett='"+giornoSett+"'";
 		
 		
 		try {
@@ -86,4 +92,8 @@ public class Default_Aereo_Dao implements AereoDao{
 		}
 		
 	}
+		
+		
 }
+
+
