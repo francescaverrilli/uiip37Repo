@@ -16,5 +16,13 @@ public class App
        Aereo a=new Aereo("787", 380, 300);
        DefaultAereoDao in= new DefaultAereoDao();
        in.insert(a);
+       
+       
+       String tipo = "shut";
+       Aereo a1= in.selectByTipo(tipo); 
+       System.out.println(a1.toString());
+       
+       Aereo a2= new Aereo("787", 500, 100);
+       in.update(a2.getTipoAereo(), a2);
     }
 }

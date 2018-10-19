@@ -31,6 +31,11 @@ public class Aereo {
 	public void setQuantitaMerci(int quantitaMerci) {
 		this.quantitaMeerci = quantitaMerci;
 	}
+
+	@Override
+	public String toString() {
+		return "Aereo [tipoAereo=" + tipoAereo + ", nPass=" + nPass + ", quantitaMeerci=" + quantitaMeerci + "]";
+	}
 	
 	
 }

@@ -38,6 +38,11 @@ public class Aeroporto {
 	public void setNpiste(int npiste) {
 		this.npiste = npiste;
 	}
+
+	@Override
+	public String toString() {
+		return "Aeroporto [citta=" + citta + ", nazione=" + nazione + ", npiste=" + npiste + "]";
+	}
 	
 	
 
