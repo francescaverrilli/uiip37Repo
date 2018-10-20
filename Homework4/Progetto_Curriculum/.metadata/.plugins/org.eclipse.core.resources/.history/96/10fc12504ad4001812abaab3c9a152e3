@@ -1,0 +1,17 @@
+package it.soprasteria.homework4.santoro;
+
+import java.text.SimpleDateFormat;
+
+import it.soprasteria.homework4.santoro.model.Candidato;
+
+/**
+ * Hello world!
+ *
+ */
+public class App_Santoro 
+{
+    public static void main( String[] args )
+    {	SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        Candidato cand=new Candidato(134,"bianchi","gennaro","via mari","76787","chieti",formatter.parse("07/06/2013"),"chieti");
+    }
+}

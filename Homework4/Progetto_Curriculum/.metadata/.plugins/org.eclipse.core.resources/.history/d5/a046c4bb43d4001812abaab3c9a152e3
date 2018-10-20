@@ -1,0 +1,46 @@
+package it.soprasteria.homework4.santoro.dao.impl;
+
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.jdbc.Connection;
+
+import it.sopra.santoro.ConnectionManager;
+import it.soprasteria.homework4.santoro.dao.CandidatoDao;
+import it.soprasteria.homework4.santoro.model.Candidato;
+
+public class Default_Candidato_Dao implements CandidatoDao{
+
+	public void insert(Candidato candidato) {
+		Connection conn;
+		String query="INSERT IGNORE INTO AEREO VALUES('"+candidato.getTipoAereo()+"',"+aereo.getNpass()+","+
+		aereo.getQuantitàMerci()+")";
+		
+		try {
+			
+			conn=(Connection) ConnectionManager.getConnection();
+			Statement statement=conn.createStatement();
+			statement.executeUpdate(query);
+			conn.close();
+			
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	public Candidato selectByTipo(int codice) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void update(int codice, Candidato candidato) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,5 @@
+package it.soprasteria.homework4.santoro.dao.impl;
+
+public class Default_Candidato_Dao {
+
+}

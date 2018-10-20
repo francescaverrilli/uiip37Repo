@@ -1,0 +1,39 @@
+package it.soprasteria.homework4.santoro.model;
+
+public class Telefono {
+	
+	String numero;
+	Candidato candidato;
+	
+	
+	public Telefono(String numero, Candidato candidato) {
+		super();
+		this.numero = numero;
+		this.candidato = candidato;
+	}
+
+
+	public String getNumero() {
+		return numero;
+	}
+
+
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+
+
+	public Candidato getCandidato() {
+		return candidato;
+	}
+
+
+	public void setCandidato(Candidato candidato) {
+		this.candidato = candidato;
+	}
+	
+	
+	
+	
+
+}

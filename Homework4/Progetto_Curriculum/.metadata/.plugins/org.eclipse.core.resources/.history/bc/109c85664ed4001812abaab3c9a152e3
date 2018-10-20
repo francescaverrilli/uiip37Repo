@@ -1,0 +1,13 @@
+package it.soprasteria.homework4.santoro.dao;
+
+import java.text.ParseException;
+
+import it.soprasteria.homework4.santoro.model.Candidato;
+
+public interface CandidatoDao {
+	
+	public void insert (Candidato candidato) throws ParseException;
+	public Candidato selectByTipo(int codice);
+	public void update(int codice,Candidato candidato);
+
+}

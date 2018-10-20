@@ -1,0 +1,5 @@
+package it.soprasteria.homework4.santoro.dao;
+
+public interface TelefonoDao {
+
+}

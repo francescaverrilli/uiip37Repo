@@ -1,0 +1,16 @@
+package it.soprasteria.homework4.santoro.model;
+
+import java.sql.Date;
+
+public class Esperienza {
+	
+	int codice;
+	Candidato candidato;
+	Attivita attivita;
+	Date dataInizio;
+	Date dataFine;
+	String azienda;
+	
+	
+
+}
