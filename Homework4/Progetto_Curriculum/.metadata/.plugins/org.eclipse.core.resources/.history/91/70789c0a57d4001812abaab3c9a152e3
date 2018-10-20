@@ -1,0 +1,71 @@
+package it.soprasteria.homework4.santoro.dao.impl;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.jdbc.Connection;
+
+import it.soprasteria.homework4.santoro.ConnectionManager;
+import it.soprasteria.homework4.santoro.dao.TelefonoDao;
+import it.soprasteria.homework4.santoro.model.Candidato;
+import it.soprasteria.homework4.santoro.model.Telefono;
+
+public class Default_Telefono_Dao implements TelefonoDao{
+
+	public void insert(Telefono telefono) {
+		Connection conn;
+		
+		String query="INSERT IGNORE INTO TELEFONO VALUES('"+telefono.getNumero()+"',"+telefono.getCandidato()+")";
+		
+		try {
+			
+			conn=(Connection) ConnectionManager.getConnection();
+			Statement statement=conn.createStatement();
+			statement.executeUpdate(query);
+			conn.close();
+			
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+	public Telefono selectByTipo(int numero) {
+		
+		Telefono telefono = null;
+		Connection conn;
+		String query="Select *from telefono where numero='"+numero+"'";
+		try {
+			conn=(Connection) ConnectionManager.getConnection();
+			Statement statement = conn.createStatement();
+			ResultSet rs=statement.executeQuery(query);
+			if(rs.next()) {
+				int numero1 = rs.getInt("numero");
+				int candidato = rs.getInt("candidato");
+				
+				telefono = new Telefono(numero1,candidato);
+			}
+			
+			conn.close();
+			
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return candidato;
+	}
+
+	public void update(int numero, Telefono candidato) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

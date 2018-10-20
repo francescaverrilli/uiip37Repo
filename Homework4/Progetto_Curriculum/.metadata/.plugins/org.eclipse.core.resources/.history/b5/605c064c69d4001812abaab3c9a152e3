@@ -1,0 +1,67 @@
+package it.soprasteria.homework4.santoro;
+import java.util.Scanner;
+
+import it.soprasteria.homework4.santoro.dao.impl.Default_Candidato_Dao;
+import it.soprasteria.homework4.santoro.model.Candidato;
+
+/**
+ * Hello world!
+ *
+ */
+public class App_Santoro 
+{
+    public static void main( String[] args )
+    {	int scelta;
+    	Scanner scan=new Scanner(System.in);
+    	Default_Candidato_Dao dafaultCandidato=new Default_Candidato_Dao();
+
+    	do {
+    		System.out.println("**************************MENU HOMEWORK4 SANTORO SERGIO GABRIELE************************************");
+    		System.out.println("UTENTE SELEZIONA FRA UNA DELLE SEGUENTI SCELTE:");
+    		System.out.println("1 : INSERIMENTO DI UN CANDIDATO E DEL SUO NUMERO TELEFONICO:");
+    		System.out.println("2 : VISUALIZZAZIONE DI TUTTI I TITOLI DI STUDIO DI UN CANDIDATO:");
+    		System.out.println("3 : AGGIORNAMENTO RESIDENZA DI UN CANDIDATO:");
+    		System.out.println("4 : FINE:");
+    		scelta=Integer.parseInt(scan.nextLine());
+    		
+    		switch(scelta) {
+    			case 1:
+    				System.out.println("Utente inserisci un codice per il candidato");
+    				int cod=Integer.parseInt(scan.nextLine());
+    				Candidato cand=dafaultCandidato.selectByTipo(cod);
+    				if(cand==null) {
+    					System.out.println("Utente inserisci il cognome del candidato");
+    					String cognome=scan.nextLine();
+    					System.out.println("Utente inserisci il nome del candidato");
+    					String nome=scan.nextLine();
+    					System.out.println("Utente inserisci la via di residenza del candidato");
+    					String viaResidenza=scan.nextLine();
+    					System.out.println("Utente inserisci il cap di residenza del candidato");
+    					String capResidenza=scan.nextLine();
+    					System.out.println("Utente inserisci la citta di residenza del candidato");
+    					String cittaResidenza=scan.nextLine();
+    					System.out.println("Utente inserisci la data di nascita del candidato nel formato yyy-MM-GG esempio 1991-12-21");
+    					String data=scan.nextLine();
+    					System.out.println("Utente inserisci la citta di nascita del candidato");
+    					String cittaNascita=scan.nextLine();
+    					Candidato candidato = new Candidato(cod,cognome,nome,viaResidenza,capResidenza,cittaResidenza,data,cittaNascita);
+    					dafaultCandidato.insert(candidato);
+    				}
+    				else {
+    					System.out.println("Codice candidato già presente nel db impossibile inserire candidato");
+    				}
+    				break;
+    			case 2:
+    				break;
+    			case 3:
+    				break;
+    			case 4:
+    				break;
+    			default:
+    				System.out.println("Utente inserisci una scelta valida");
+    		}
+    		
+    	}while(scelta!=4);
+    	scan.close();
+    }
+}

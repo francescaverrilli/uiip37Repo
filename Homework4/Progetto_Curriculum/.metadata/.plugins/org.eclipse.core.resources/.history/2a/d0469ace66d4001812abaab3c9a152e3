@@ -1,0 +1,25 @@
+package it.soprasteria.homework4.santoro;
+import java.util.Scanner;
+
+import it.soprasteria.homework4.santoro.dao.impl.Default_Candidato_Dao;
+import it.soprasteria.homework4.santoro.model.Candidato;
+
+/**
+ * Hello world!
+ *
+ */
+public class App_Santoro 
+{
+    public static void main( String[] args )
+    {	int scelta;
+    	Scanner scan=new Scanner(System.in);
+
+    	do {
+    		System.out.println("**************************MENU HOMEWORK4 SANTORO SERGIO GABRIELE************************************");
+    		System.out.println("UTENTE SELEZIONA FRA UNA DELLE SEGUENTI SCELTE:");
+    		scelta=Integer.parseInt(scan.nextLine());
+    		
+    	}while(scelta!=4);
+    	
+    }	
+}

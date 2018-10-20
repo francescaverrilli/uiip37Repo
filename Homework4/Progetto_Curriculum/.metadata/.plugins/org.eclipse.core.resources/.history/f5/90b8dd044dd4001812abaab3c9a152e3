@@ -1,0 +1,98 @@
+package it.soprasteria.homework4.santoro.dao.impl;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.jdbc.Connection;
+
+import it.soprasteria.homework4.santoro.ConnectionManager;
+import it.soprasteria.homework4.santoro.dao.CandidatoDao;
+import it.soprasteria.homework4.santoro.model.Candidato;
+
+public class Default_Candidato_Dao implements CandidatoDao{
+
+	public void insert(Candidato candidato) {
+		Connection conn;
+		String query="INSERT IGNORE INTO CANDIDATO VALUES('"+candidato.getCodice()+"','"+candidato.getCognome()+"','"+
+		candidato.getNome()+"','"+candidato.getViaResidenza()+"','"+candidato.getCapResidenza()+"','"+candidato.getViaResidenza()+"','"
+		+candidato.getCittaResidenza()+"','"+candidato.getDataNascita()+"','"+candidato.getLuogoNascita()+"')";
+		
+		try {
+			
+			conn=(Connection) ConnectionManager.getConnection();
+			Statement statement=conn.createStatement();
+			statement.executeUpdate(query);
+			conn.close();
+			
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	public Candidato selectByTipo(int codice) {
+		
+		Candidato candidato = null;
+		Connection conn;
+		String query="Select *from candidato where codice='"+codice+"'";
+		try {
+			conn=(Connection) ConnectionManager.getConnection();
+			Statement statement = conn.createStatement();
+			ResultSet rs=statement.executeQuery(query);
+			if(rs.next()) {
+				int codice1 = rs.getInt("codice");
+				String cognome = rs.getString("cognome");
+				String nome = rs.getString("nome");
+				String viaResidenza = rs.getString("viaresidenza");
+				String capResidenza = rs.getString("capresidenza");
+				String cittaResidenza = rs.getString("cittaresidenza");
+				String dataNascita = rs.getString("datenascita");
+				String luogoNascita = rs.getString("luogonascita");
+				candidato = new Candidato(codice1,cognome,nome,viaResidenza,capResidenza,cittaResidenza,dataNascita,luogoNascita);
+			}
+			
+			conn.close();
+			
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return candidato;
+	}
+
+	public void update(int codice, Candidato candidato) {
+		Connection conn;
+		String query="Update candidato set viaresidenza='"+candidato.getViaResidenza()+
+				" capresidenza='"+candidato.getCapResidenza()+" cittaresidenza='"+candidato.getCittaResidenza()+" where tipoAereo='"+codice+"'";
+		
+		
+		try {
+			conn=(Connection) ConnectionManager.getConnection();
+			Statement statement = conn.createStatement();
+			statement.executeUpdate(query);
+
+			
+			conn.close();
+			
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+		
+}
+	
+	
+
+

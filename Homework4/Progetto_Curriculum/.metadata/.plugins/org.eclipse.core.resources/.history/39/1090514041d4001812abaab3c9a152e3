@@ -1,0 +1,9 @@
+package it.soprasteria.homework4.santoro.dao.impl;
+
+import it.soprasteria.homework4.santoro.dao.CandidatoDao;
+
+public class Default_Candidato_Dao implements CandidatoDao{
+	
+	
+
+}

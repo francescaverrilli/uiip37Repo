@@ -1,0 +1,22 @@
+package it.soprasteria.homework4.santoro;
+import it.soprasteria.homework4.santoro.dao.impl.Default_Candidato_Dao;
+import it.soprasteria.homework4.santoro.model.Candidato;
+
+/**
+ * Hello world!
+ *
+ */
+public class App_Santoro 
+{
+    public static void main( String[] args )
+    {
+
+    	
+    	Candidato cand=new Candidato(134,"bianchi","gennaro","via mari","76787","chieti","1998-12-10","chieti");
+    	Default_Candidato_Dao d = new Default_Candidato_Dao();
+    	d.insert(cand);
+    	
+    	System.out.println(d.selectByTipo(134));
+    	
+    }	
+}
