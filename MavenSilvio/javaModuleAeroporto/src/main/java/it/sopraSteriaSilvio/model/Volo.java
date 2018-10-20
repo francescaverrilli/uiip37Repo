@@ -11,7 +11,6 @@ public class Volo {
 	private int oraArrivo;
 	
 	private Volo() {
-		
 	}
 	
 	public Volo(int id, String giotnoSett, String cittaPertenza, String cittaArr, String tipoAereo, int oraPartenza,
@@ -88,8 +87,4 @@ public class Volo {
 				+ cittaArr + ", tipoAereo=" + tipoAereo + ", oraPartenza=" + oraPartenza + ", oraArrivo=" + oraArrivo
 				+ "]";
 	}
-	
-	
-	
-
 }
