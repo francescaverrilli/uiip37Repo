@@ -1,0 +1,9 @@
+package homework4.Guastaferro.model;
+
+public class Candidato {
+
+	public Candidato() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

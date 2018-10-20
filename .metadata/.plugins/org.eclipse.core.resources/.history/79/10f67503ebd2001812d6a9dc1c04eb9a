@@ -1,0 +1,5 @@
+package it.AndreaGuastaferro.dao;
+
+public interface AeroportoDao {
+
+}

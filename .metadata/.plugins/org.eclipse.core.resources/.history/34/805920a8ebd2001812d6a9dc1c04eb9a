@@ -1,0 +1,9 @@
+package it.Sopra.AndreaGuastaferro.dao.impl;
+
+public class DefaultAeroportoDao implements AeroportoDao {
+
+	public DefaultAeroportoDao() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

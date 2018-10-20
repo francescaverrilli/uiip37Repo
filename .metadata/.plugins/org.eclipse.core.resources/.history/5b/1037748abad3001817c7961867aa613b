@@ -1,0 +1,5 @@
+package homework4.Guastaferro.dao;
+
+public interface CandidatoDao {
+
+}

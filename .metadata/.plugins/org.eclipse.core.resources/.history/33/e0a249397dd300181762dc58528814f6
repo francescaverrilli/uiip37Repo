@@ -1,0 +1,13 @@
+package it.AndreaGuastaferro.dao;
+
+import it.Sopra.AndreaGuastaferro.model.Aereo;
+import it.Sopra.AndreaGuastaferro.model.Aeroporto;
+import it.Sopra.AndreaGuastaferro.model.Volo;
+
+public interface VoloDao {
+
+	public void insert (Volo volo);
+	public Aereo selectByTipo (int id, String tipo);
+	public void update (String tipo, Volo volo);
+	
+}

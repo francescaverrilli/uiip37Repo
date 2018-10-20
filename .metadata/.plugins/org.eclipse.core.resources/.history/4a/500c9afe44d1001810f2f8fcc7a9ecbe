@@ -1,0 +1,35 @@
+import java.util.LinkedList;
+
+public class ResidentiCampaniaAndrea {
+	
+	private LinkedList<Indirizzo>lista_indirizzi;
+	private LinkedList<Persona> lista_persone;
+	
+	public ResidentiCampaniaAndrea(LinkedList<Indirizzo> lista_indirizzi, LinkedList<Persona> lista_persone) {
+		super();
+		this.lista_indirizzi = lista_indirizzi;
+		this.lista_persone = lista_persone;
+	}
+
+	public LinkedList<Indirizzo> getLista_indirizzi() {
+		return lista_indirizzi;
+	}
+
+	public void setLista_indirizzi(LinkedList<Indirizzo> lista_indirizzi) {
+		this.lista_indirizzi = lista_indirizzi;
+	}
+
+	public LinkedList<Persona> getLista_persone() {
+		return lista_persone;
+	}
+
+	public void setLista_persone(LinkedList<Persona> lista_persone) {
+		this.lista_persone = lista_persone;
+	}
+
+	
+	
+	
+
+
+}

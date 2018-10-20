@@ -1,0 +1,12 @@
+import java.util.LinkedList;
+
+public class Guastaferro {
+
+	public static Persona getPersonaPiuGiovane (LinkedList<Persona> persone) {
+		LinkedList<Persona> persona_temp= new LinkedList<Persona>();
+		for(int i=0; i < persone.size();i++) {
+			
+		}
+	}
+
+}
