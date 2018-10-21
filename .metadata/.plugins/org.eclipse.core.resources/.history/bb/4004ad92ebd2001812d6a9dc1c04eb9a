@@ -1,0 +1,9 @@
+package it.Sopra.AndreaGuastaferro.dao.impl;
+
+public class DefaultAereoDao {
+
+	public DefaultAereoDao() implements AereoDao{
+		// TODO Auto-generated constructor stub
+	}
+
+}

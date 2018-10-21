@@ -1,0 +1,9 @@
+package it.Sopra.AndreaGuastaferro.dao.impl;
+
+public class DefaultVoloDao {
+
+	public DefaultVoloDao() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

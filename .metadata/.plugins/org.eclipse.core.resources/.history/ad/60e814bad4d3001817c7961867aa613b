@@ -1,0 +1,81 @@
+package homework4.Guastaferro.dao.impl;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.LinkedList;
+
+import homework4.Guastaferro.dao.CandidatoDao;
+import homework4.Guastaferro.model.Candidato;
+import homework4.Guastaferro.model.ConnectionManager;
+import homework4.Guastaferro.model.TitoloDiStudio;
+
+public class DefaultCandidatoDao implements CandidatoDao {
+
+	public DefaultCandidatoDao() {
+
+	}
+
+	public void insert(homework4.Guastaferro.model.Candidato candidato) {
+		Connection conn;
+		String query = "INSERT INTO CANDIDATO VALUES("+candidato.getId()+", '"+ candidato.getCognome()+"', '"+candidato.getNome()+"', '"+ candidato.getViaresidenza()+"', '"+candidato.getCap()+"', '"+candidato.getCittaresidenza()+"', '"+candidato.getDatanascita()+"', '"+candidato.getLuogodinascita()+"'"+")" ;                 
+		try {
+			conn= ConnectionManager.getConnection();
+			Statement statement= conn.createStatement();
+			statement.executeUpdate(query);
+			conn.close();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public LinkedList<TitoloDiStudio> selectBytipo(int codice) {
+		LinkedList<TitoloDiStudio> titoli= new LinkedList<TitoloDiStudio>();
+		Connection connection;
+		String query=( "Select titolostudio.codice,titolostudio.descrizione from( candidato AS c Inner Join istruzione As i On c.codice=i.titolo) Inner Join titolostudio As t On i.titolo=titolo.codice WHERE c.codice="+codice);
+		System.out.println(query);
+		try {
+			connection=ConnectionManager.getConnection();
+			Statement st= connection.createStatement();
+			ResultSet result=st.executeQuery(query);
+			while(result.next()) {
+				
+				int codice2 = result.getInt("codice");
+				String descrizione=result.getString("descrizione");
+				titoli.add(new TitoloDiStudio(codice2, descrizione));
+			}
+			
+			connection.close();
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		return titoli;
+	}
+
+	public void update(int codice, Candidato candidato) {
+		Connection conn;
+		String query="Update candidato set codice="+candidato.getId()+", cognome='"+candidato.getCognome()+"', nome='"+candidato.getNome()+"', viaresidenza='"+candidato.getViaresidenza()+"', capresidenza='"+candidato.getCap()+"', cittaresidenza='"+candidato.getCittaresidenza()+"', datanascita='"+"', luogodinascita='"+candidato.getLuogodinascita()+"'"+
+		"WHERE candidato.codice="+codice;
+		System.out.println(query);
+		try {
+			conn=ConnectionManager.getConnection();
+			Statement s= conn.createStatement();
+			s.executeQuery(query);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+
+}

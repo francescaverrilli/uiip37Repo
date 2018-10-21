@@ -1,0 +1,16 @@
+package Guastaferro.it.soprasteria.guastaferro;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ) {
+        System.out.println( "Ciao, inserisci l'operazione da svolgere:"
+        		+ "1) Inserisci un candidato;\n"
+        		+ "2) Visualizza i titoli di studio di un candidato;\n"
+        		+ "3) Aggiorna la residenza di un candidato;\n"
+        		+ "4)Esci;" );
+    }
+}

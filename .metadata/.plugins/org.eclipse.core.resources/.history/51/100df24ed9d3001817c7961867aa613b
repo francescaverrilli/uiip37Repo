@@ -1,0 +1,72 @@
+package Guastaferro.it.soprasteria.guastaferro;
+
+import java.util.Scanner;
+
+import homework4.Guastaferro.dao.impl.DefaultCandidatoDao;
+import homework4.Guastaferro.model.Candidato;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ) {
+        System.out.println( "Ciao, inserisci l'operazione da svolgere:\n"
+        		+ "1) Inserisci un candidato;\n"
+        		+ "2) Visualizza i titoli di studio di un candidato;\n"
+        		+ "3) Aggiorna la residenza di un candidato;\n"
+        		+ "4)Esci;" );
+        
+        Scanner input= new Scanner(System.in);
+        String scelta= input.nextLine();
+        int scel=Integer.parseInt(scelta);
+        
+        while(scel!=4) {
+        	
+        	switch (scel) {
+        	
+        	case 1:
+        		System.out.println("Inserisci il codice del candidato");
+        		Scanner code=new Scanner(System.in);
+        		int codice=code.nextInt();
+        		System.out.println("Inserisci il cognome del candidato");
+        		Scanner cog=new Scanner(System.in);
+        		String cognome=cog.nextLine();
+        		System.out.println("Inserisci il nome del candidato");
+        		Scanner no=new Scanner(System.in);
+        		String nome= no.nextLine();
+        		System.out.println("Inserisci la via di residenza del nuovo candidato");
+        		Scanner via_res=new Scanner(System.in);
+        		String via_residenza=via_res.nextLine();
+        		System.out.println("Inserisci il cap di residenza del nuovo candidato");
+        		Scanner cap_res=new Scanner(System.in);
+        		String cap_residenza=cap_res.nextLine();
+        		System.out.println("Inserisci la città di residenza del nuovo candidato");
+        		Scanner cit_res= new Scanner(System.in);
+        		String cit_residenza=cit_res.nextLine();
+        		System.out.println("Inserisci la data di nascita del nuovo candidato");
+        		Scanner d_d_n=new Scanner(System.in);
+        		String d_d_nascita=d_d_n.nextLine();
+        		System.out.println("Inserisci il luogo di nascita del nuovo candidato");
+        		Scanner l_d_n= new Scanner(System.in);
+        		String luogodinascita=l_d_n.nextLine();
+        		Candidato nuovo_candidato= new Candidato(codice, cognome, nome, via_residenza, cap_residenza, cit_residenza, d_d_nascita, luogodinascita);
+        		DefaultCandidatoDao dfc= new DefaultCandidatoDao();
+        		dfc.insert(nuovo_candidato);
+        		System.out.println(nuovo_candidato.toString());
+        		System.out.println("Il candidato è stato inserito correttamente");
+        		break;
+        		
+        	case 2:
+        		break;
+        		
+        	case 3:
+        		break;
+        		
+        		
+        	}
+        }
+        
+    }
+}

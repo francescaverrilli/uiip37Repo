@@ -1,0 +1,9 @@
+package it.Sopra.AndreaGuastaferro.model;
+
+public class Aereo {
+
+	public Aereo() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

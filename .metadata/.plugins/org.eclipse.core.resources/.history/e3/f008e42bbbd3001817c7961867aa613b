@@ -1,0 +1,9 @@
+package homework4.Guastaferro.dao;
+
+public interface CandidatoDao {
+
+	public void insert(Candidato candidato);
+	public Candidato selectBytipo(int id);
+	public void update();
+	
+}

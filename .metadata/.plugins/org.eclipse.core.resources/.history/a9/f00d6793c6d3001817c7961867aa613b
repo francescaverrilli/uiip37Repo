@@ -1,0 +1,9 @@
+package homework4.Guastaferro.model;
+
+public class Telefono {
+
+	public Telefono() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

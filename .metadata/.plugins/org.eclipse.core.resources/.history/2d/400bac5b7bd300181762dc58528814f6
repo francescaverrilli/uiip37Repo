@@ -1,0 +1,12 @@
+package it.AndreaGuastaferro.dao;
+
+import it.Sopra.AndreaGuastaferro.model.Aereo;
+import it.Sopra.AndreaGuastaferro.model.Aeroporto;
+
+public interface AeroportoDao {
+
+	public void insert (Aeroporto aeroporto);
+	public Aereo selectByTipo (String tipo);
+	public void update (String tipo, Aeroporto aeroporto);
+	
+}

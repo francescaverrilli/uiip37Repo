@@ -1,0 +1,20 @@
+package it.Sopra.AndreaGuastaferro;
+
+import it.AndreaGuastaferro.dao.AereoDao;
+import it.Sopra.AndreaGuastaferro.dao.impl.DefaultAereoDao;
+import it.Sopra.AndreaGuastaferro.model.Aereo;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+	
+    public static void main( String[] args ){
+    
+    Aereo n = new Aereo("A468",235,5532);
+    AereoDao aereo= new DefaultAereoDao();
+    aereo.insert(n);
+    	
+    }
+}

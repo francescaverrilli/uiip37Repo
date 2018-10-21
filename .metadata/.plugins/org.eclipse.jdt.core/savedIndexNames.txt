@@ -1,0 +1,4 @@
+INDEX VERSION 1.130+C:\Users\soprasteria\Desktop\repository\uiip37Repo\.metadata\.plugins\org.eclipse.jdt.core
+1766498986.index
+1234032293.index
+877787245.index

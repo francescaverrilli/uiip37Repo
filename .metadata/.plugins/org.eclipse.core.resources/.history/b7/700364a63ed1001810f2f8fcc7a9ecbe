@@ -1,0 +1,18 @@
+
+public class Persona {
+
+	private String nome;
+	private String cognome;
+	private String data_di_nascita;
+	private Indirizzo nuovo_indirizzo;
+	
+	public Persona(String nome, String cognome, String data_di_nascita , Indirizzo indirizzo) {
+		
+		this.nome=nome;
+		this.cognome=cognome;
+		this.data_di_nascita=data_di_nascita;
+		this.nuovo_indirizzo=indirizzo;
+		
+	}
+
+}
