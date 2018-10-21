@@ -26,42 +26,45 @@ public class MainCurricula {
 
 				System.out.println("Inserisci il codice del nuovo candidato");
 				int codice = Integer.parseInt(input.nextLine());
-				c1.setCodice(codice);
+				if (!candidatoDao.selectCodiciCandidato().contains(codice)) {
+					c1.setCodice(codice);
 
-				System.out.println("Inserisci il cognome del nuovo candidato");
-				String cognome = input.nextLine();
-				c1.setCognome(cognome);
+					System.out.println("Inserisci il cognome del nuovo candidato");
+					String cognome = input.nextLine();
+					c1.setCognome(cognome);
 
-				System.out.println("Inserisci il nome del nuovo candidato");
-				String nome = input.nextLine();
-				c1.setNome(nome);
+					System.out.println("Inserisci il nome del nuovo candidato");
+					String nome = input.nextLine();
+					c1.setNome(nome);
 
-				System.out.println("Inserisci la via della residenza del nuovo candidato");
-				String via = input.nextLine();
-				c1.setViaResidenza(via);
+					System.out.println("Inserisci la via della residenza del nuovo candidato");
+					String via = input.nextLine();
+					c1.setViaResidenza(via);
 
-				System.out.println("Inserisci il CAP della città di residenza del nuovo candidato");
-				String cap = input.nextLine();
-				c1.setCapResidenza(cap);
+					System.out.println("Inserisci il CAP della città di residenza del nuovo candidato");
+					String cap = input.nextLine();
+					c1.setCapResidenza(cap);
 
-				System.out.println("Inserisci la citta di residenza del nuovo candidato");
-				String citta = input.nextLine();
-				c1.setCittaResidenza(citta);
+					System.out.println("Inserisci la citta di residenza del nuovo candidato");
+					String citta = input.nextLine();
+					c1.setCittaResidenza(citta);
 
-				System.out.println("Inserisci la data di nascita del nuovo candidato");
-				String dataNascita = input.nextLine();
-				c1.setDataNascita(dataNascita);
+					System.out.println("Inserisci la data di nascita del nuovo candidato");
+					String dataNascita = input.nextLine();
+					c1.setDataNascita(dataNascita);
 
-				System.out.println("Inserisci il luogo di nascita del nuovo candidato");
-				String luogo = input.nextLine();
-				c1.setLuogoNascita(luogo);
+					System.out.println("Inserisci il luogo di nascita del nuovo candidato");
+					String luogo = input.nextLine();
+					c1.setLuogoNascita(luogo);
 
-				System.out.println("Inserisci il numero di telefono del nuovo candidato");
-				String numero = input.nextLine();
+					System.out.println("Inserisci il numero di telefono del nuovo candidato");
+					String numero = input.nextLine();
 
-				System.out.println(c1);
+					System.out.println(c1);
 
-				candidatoDao.insert(c1, numero);
+					candidatoDao.insert(c1, numero);
+				} else
+					System.out.println("Codice candidato già presente");
 
 				break;
 
