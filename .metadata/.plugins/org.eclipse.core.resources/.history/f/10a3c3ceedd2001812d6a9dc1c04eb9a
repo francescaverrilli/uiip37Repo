@@ -1,0 +1,17 @@
+package it.Sopra.AndreaGuastaferro;
+
+import it.Sopra.AndreaGuastaferro.model.Aereo;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+	
+    public static void main( String[] args ){
+    
+    Aereo n = new Aereo ("A469",234,5432);
+    
+    	
+    }
+}

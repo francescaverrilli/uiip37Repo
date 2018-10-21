@@ -1,0 +1,9 @@
+package homework4.Guastaferro.dao.impl;
+
+public class DefaultCandidatoDao {
+
+	public DefaultCandidatoDao() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

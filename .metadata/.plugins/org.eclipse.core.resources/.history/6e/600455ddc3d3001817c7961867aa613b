@@ -1,0 +1,40 @@
+package homework4.Guastaferro.dao.impl;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import homework4.Guastaferro.dao.Candidato;
+import homework4.Guastaferro.dao.CandidatoDao;
+import homework4.Guastaferro.model.ConnectionManager;
+
+public class DefaultCandidatoDao implements CandidatoDao {
+
+	public DefaultCandidatoDao() {
+
+	}
+
+	public void insert(homework4.Guastaferro.model.Candidato candidato) {
+		Connection conn;
+		String query = "INSERT INTO CANDIDATO VALUES("+candidato.getId()+", '"+ candidato.getCognome()+"', '"+candidato.getNome()+"', '"+ candidato.getViaresidenza()+"', '"+candidato.getCap()+"', '"+candidato.getCittaresidenza()+"', '"+candidato.getDatanascita()+"', '"+candidato.getLuogodinascita()+"'"+")" ;                 
+		try {
+			conn= ConnectionManager.getConnection();
+			Statement statement= conn.createStatement();
+			statement.executeUpdate(query);
+			conn.close();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public Candidato selectBytipo(int id) {
+		return null;
+	}
+
+	public void update(int id, Candidato condidato) {
+		
+	}
+
+}

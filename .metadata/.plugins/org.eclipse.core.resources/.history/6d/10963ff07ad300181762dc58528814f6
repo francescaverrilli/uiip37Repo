@@ -1,0 +1,28 @@
+package it.Sopra.AndreaGuastaferro.dao.impl;
+
+import it.AndreaGuastaferro.dao.AeroportoDao;
+import it.Sopra.AndreaGuastaferro.model.Aereo;
+import it.Sopra.AndreaGuastaferro.model.Aeroporto;
+
+public class DefaultAeroportoDao implements AeroportoDao {
+
+	public DefaultAeroportoDao() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void insert(Aeroporto aeroporto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Aereo selectByTipo(String tipo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void update(String tipo, Aeroporto aeroporto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

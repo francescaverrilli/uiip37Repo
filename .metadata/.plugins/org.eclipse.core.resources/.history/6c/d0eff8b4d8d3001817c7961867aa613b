@@ -1,0 +1,39 @@
+package Guastaferro.it.soprasteria.guastaferro;
+
+import java.util.Scanner;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ) {
+        System.out.println( "Ciao, inserisci l'operazione da svolgere:\n"
+        		+ "1) Inserisci un candidato;\n"
+        		+ "2) Visualizza i titoli di studio di un candidato;\n"
+        		+ "3) Aggiorna la residenza di un candidato;\n"
+        		+ "4)Esci;" );
+        
+        Scanner input= new Scanner(System.in);
+        String scelta= input.nextLine();
+        int scel=Integer.parseInt(scelta);
+        
+        while(scel!=4) {
+        	
+        	switch (scel) {
+        	
+        	case 1:
+        		System.out.println("Inserisci il codice del candidato");
+        		System.out.println("Inserisci il cognome del candidato");
+        		System.out.println("Inserisci il nome del candidato");
+        		System.out.println("Inserisci la via di residenza del nuovo candidato");
+        		System.out.println("Inserisci il cap di residenza del nuovo candidato");
+        		System.out.println("Inserisci la città di residenza del nuovo candidato");
+        		System.out.println();
+        	
+        	}
+        }
+        
+    }
+}

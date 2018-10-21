@@ -1,0 +1,9 @@
+package homework4.Guastaferro.model;
+
+public class TitoloDiStudio {
+
+	public TitoloDiStudio() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

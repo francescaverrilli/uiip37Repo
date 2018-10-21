@@ -1,0 +1,9 @@
+package homework4.Guastaferro.model;
+
+public class Attivita {
+
+	public Attivita() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

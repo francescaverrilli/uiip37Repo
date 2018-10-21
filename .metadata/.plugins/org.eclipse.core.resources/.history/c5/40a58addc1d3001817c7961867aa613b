@@ -1,0 +1,28 @@
+package homework4.Guastaferro.dao.impl;
+
+import java.sql.Connection;
+
+import homework4.Guastaferro.dao.Candidato;
+import homework4.Guastaferro.dao.CandidatoDao;
+
+public class DefaultCandidatoDao implements CandidatoDao {
+
+	public DefaultCandidatoDao() {
+
+	}
+
+	public void insert(Candidato candidato) {
+		Connection conn;
+		String query = "INSERT INTO VALUES('"+candidato.
+		
+	}
+
+	public Candidato selectBytipo(int id) {
+		return null;
+	}
+
+	public void update(int id, Candidato condidato) {
+		
+	}
+
+}

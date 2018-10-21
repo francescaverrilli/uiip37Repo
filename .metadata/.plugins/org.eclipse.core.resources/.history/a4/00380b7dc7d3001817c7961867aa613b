@@ -1,0 +1,11 @@
+package homework4.Guastaferro.dao;
+
+import homework4.Guastaferro.model.Candidato;
+
+public interface CandidatoDao {
+
+	public void insert(Candidato candidato);
+	public Candidato selectBytipo(int id);
+	public void update(int id, Candidato condidato);
+	
+}

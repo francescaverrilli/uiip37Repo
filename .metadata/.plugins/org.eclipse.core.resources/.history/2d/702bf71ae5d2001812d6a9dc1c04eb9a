@@ -1,0 +1,11 @@
+package it.Sopra.AndreaGuastaferro.model;
+
+public class Volo {
+
+	
+	
+	public Volo() {
+
+	}
+
+}

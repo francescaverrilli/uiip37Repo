@@ -1,0 +1,27 @@
+package it.Sopra.AndreaGuastaferro.dao.impl;
+
+import it.AndreaGuastaferro.dao.AereoDao;
+import it.Sopra.AndreaGuastaferro.model.Aereo;
+
+public class DefaultAereoDao  implements AereoDao {
+
+	public DefaultAereoDao(){
+		// TODO Auto-generated constructor stub
+	}
+
+	public void insert(Aereo aereo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Aereo selectByTipo(String tipo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void update(String tipo, Aereo aereo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

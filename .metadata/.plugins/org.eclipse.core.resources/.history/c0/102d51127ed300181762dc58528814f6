@@ -1,0 +1,67 @@
+package it.Sopra.AndreaGuastaferro.dao.impl;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import it.AndreaGuastaferro.dao.VoloDao;
+import it.Sopra.AndreaGuastaferro.model.Aereo;
+import it.Sopra.AndreaGuastaferro.model.Aeroporto;
+import it.Sopra.AndreaGuastaferro.model.ConnectionManager;
+import it.Sopra.AndreaGuastaferro.model.Volo;
+
+public class DefaultVoloDao implements VoloDao{
+
+	public DefaultVoloDao() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void insert(Volo volo) {
+		Connection conn;
+		String query= "Insert into volo values('" +volo.getId()+"'," + volo.getGiorno()+","+ volo.getCittaDipartenza()+","+volo.getCittaDarrivo()+","+volo.getTipoAereo()+","+volo.getOra_partenza()+","+volo.getOra_arrivo()+")";
+		try {
+			conn=ConnectionManager.getConnection();
+			Statement statement = conn.createStatement();
+			statement.executeUpdate(query);
+			conn.close();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}	
+	}
+
+	public Volo selectByTipo(int id, String giorno) {
+		Volo a= null;
+		Connection conn;
+		String query = "Select * from volo where id= '"+id+"' "+"&&"+ " giornoSett='"+giorno+"'");
+		System.out.println(query);
+		try {
+			conn=ConnectionManager.getConnection();
+			Statement statement = conn.createStatement();
+			ResultSet rs = statement.executeQuery(query);
+			if (rs.next()) {
+				String cittaS= rs.getString("citta");
+				String nazione = rs.getString("nazione");
+				int npiste = rs.getInt("npiste");
+				a = new Volo();
+			}
+			conn.close();
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return a;
+		return null;
+	}
+
+	public void update(String tipo, Volo volo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
