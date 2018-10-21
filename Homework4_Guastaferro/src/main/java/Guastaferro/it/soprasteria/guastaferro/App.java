@@ -30,7 +30,8 @@ public class App
         	case 1:
         		System.out.println("Inserisci il codice del candidato");
         		Scanner code=new Scanner(System.in);
-        		int codice=code.nextInt();
+        		int codice=Integer.parseInt(code.nextLine());
+        		if(dfc.selectCandidatoById(codice)==null) {
         		System.out.println("Inserisci il cognome del candidato");
         		Scanner cog=new Scanner(System.in);
         		String cognome=cog.nextLine();
@@ -59,6 +60,9 @@ public class App
         		dfc.insert(phone,nuovo_candidato);
         		//System.out.println(nuovo_candidato.toString());
         		System.out.println("Il candidato è stato inserito correttamente");
+        	}
+    		else
+    			System.out.println("Candidato già presente");
         		break;
         		
         	case 2:
@@ -75,7 +79,8 @@ public class App
         	case 3:
         		System.out.println("Inserisci il codice del candidato");
         		Scanner cc=new Scanner(System.in);
-        		int codice1=cc.nextInt();
+        		int codice1=Integer.parseInt(cc.nextLine());
+        		if(dfc.selectCandidatoById(codice1)!=null) {
         		System.out.println("Inserisci la nuova strada del candidato");
         		Scanner n_strada=new Scanner(System.in);
         		String nuova_strada=n_strada.nextLine();
@@ -86,6 +91,10 @@ public class App
         		Scanner n_citta=new Scanner(System.in);
         		String nuova_citta=n_citta.nextLine();
         		dfc.update(codice1, nuova_strada, nuovo_cap, nuova_citta);
+        		System.out.println("Nuovo candidato Inserito");
+        		}
+        		else
+        			System.out.println("Il candidato non esiste");
         		break;
         	
         	default:

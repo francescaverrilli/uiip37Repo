@@ -81,6 +81,39 @@ public class DefaultCandidatoDao implements CandidatoDao {
 		}
 		
 	}
+	
+	public Candidato selectCandidatoById(int codice) {
+		Candidato candidato = null;
+		Connection conn;
+		String query="Select *from candidato where codice='"+codice+"'";
+		try {
+			conn=(Connection) ConnectionManager.getConnection();
+			Statement statement = conn.createStatement();
+			ResultSet rs=statement.executeQuery(query);
+			if(rs.next()) {
+				int codice1 = rs.getInt("codice");
+				String cognome = rs.getString("cognome");
+				String nome = rs.getString("nome");
+				String viaResidenza = rs.getString("viaresidenza");
+				String capResidenza = rs.getString("capresidenza");
+				String cittaResidenza = rs.getString("cittaresidenza");
+				String datanascita = rs.getString("datanascita");
+				String luogodinascita = rs.getString("luogodinascita");
+				candidato = new Candidato(codice1,cognome,nome,viaResidenza,capResidenza,cittaResidenza,datanascita,luogodinascita);
+			}
+			
+			conn.close();
+			
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return candidato;
+	}
 
 
 }
